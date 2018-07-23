@@ -44,14 +44,15 @@ class Club {
     }
     
     func delete(name : String) -> Member?{
-        let i = memberList.count
+        var i = memberList.count
         while i > 0{
             if memberList[i].name == name{
                 let ret = memberList.remove(at: i)
                 return ret
             }
-        return nil
+            i -= 1
         }
+        return nil
     }
 }
 
