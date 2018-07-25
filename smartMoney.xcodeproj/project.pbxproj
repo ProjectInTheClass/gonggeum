@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2A428E210712AB002B1DA9 /* Main.storyboard */; };
+		9D2A4291210714F3002B1DA9 /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A4290210714F3002B1DA9 /* MyGroupTableViewController.swift */; };
 		9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922EF420F47F9500BFEFDD /* AppDelegate.swift */; };
 		9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922EF620F47F9500BFEFDD /* ViewController.swift */; };
 		9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D922EFB20F47F9500BFEFDD /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		9D2A428E210712AB002B1DA9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9D2A4290210714F3002B1DA9 /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
 		9D922EF120F47F9500BFEFDD /* smartMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smartMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D922EF420F47F9500BFEFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D922EF620F47F9500BFEFDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */,
 				9D922EF620F47F9500BFEFDD /* ViewController.swift */,
 				9D2A428E210712AB002B1DA9 /* Main.storyboard */,
+				9D2A4290210714F3002B1DA9 /* MyGroupTableViewController.swift */,
 				9D922EFB20F47F9500BFEFDD /* Assets.xcassets */,
 				9D922EFD20F47F9500BFEFDD /* LaunchScreen.storyboard */,
 				9D922F0020F47F9500BFEFDD /* Info.plist */,
@@ -269,6 +272,7 @@
 				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
 				9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */,
 				9D922F2920F480EE00BFEFDD /* UIViewControllerKeyboard.swift in Sources */,
+				9D2A4291210714F3002B1DA9 /* MyGroupTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
