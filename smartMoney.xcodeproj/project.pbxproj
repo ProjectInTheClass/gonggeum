@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2A428E210712AB002B1DA9 /* Main.storyboard */; };
-		9D2A4291210714F3002B1DA9 /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A4290210714F3002B1DA9 /* MyGroupTableViewController.swift */; };
+		9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */; };
+		9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */; };
 		9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922EF420F47F9500BFEFDD /* AppDelegate.swift */; };
 		9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922EF620F47F9500BFEFDD /* ViewController.swift */; };
 		9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D922EFB20F47F9500BFEFDD /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 		9D922F1520F47F9500BFEFDD /* smartMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922F1420F47F9500BFEFDD /* smartMoneyUITests.swift */; };
 		9D922F2920F480EE00BFEFDD /* UIViewControllerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922F2820F480EE00BFEFDD /* UIViewControllerKeyboard.swift */; };
 		9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */; };
+		9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */; };
+		9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413E12110473B00BF8022 /* StoryboardB.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,8 @@
 
 /* Begin PBXFileReference section */
 		9D2A428E210712AB002B1DA9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		9D2A4290210714F3002B1DA9 /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
+		9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGroupViewController.swift; sourceTree = "<group>"; };
+		9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGroupViewController.swift; sourceTree = "<group>"; };
 		9D922EF120F47F9500BFEFDD /* smartMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smartMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D922EF420F47F9500BFEFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D922EF620F47F9500BFEFDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		9D922F1620F47F9500BFEFDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D922F2820F480EE00BFEFDD /* UIViewControllerKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerKeyboard.swift; sourceTree = "<group>"; };
 		9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerModal.swift; sourceTree = "<group>"; };
+		9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardA.storyboard; sourceTree = "<group>"; };
+		9DE413E12110473B00BF8022 /* StoryboardB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +114,13 @@
 				9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */,
 				9D922EF620F47F9500BFEFDD /* ViewController.swift */,
 				9D2A428E210712AB002B1DA9 /* Main.storyboard */,
-				9D2A4290210714F3002B1DA9 /* MyGroupTableViewController.swift */,
+				9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */,
+				9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */,
 				9D922EFB20F47F9500BFEFDD /* Assets.xcassets */,
 				9D922EFD20F47F9500BFEFDD /* LaunchScreen.storyboard */,
 				9D922F0020F47F9500BFEFDD /* Info.plist */,
+				9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */,
+				9DE413E12110473B00BF8022 /* StoryboardB.storyboard */,
 			);
 			path = smartMoney;
 			sourceTree = "<group>";
@@ -242,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D922EFF20F47F9500BFEFDD /* LaunchScreen.storyboard in Resources */,
+				9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */,
 				9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */,
 				9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */,
+				9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */,
 				9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */,
 				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
+				9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */,
 				9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */,
 				9D922F2920F480EE00BFEFDD /* UIViewControllerKeyboard.swift in Sources */,
-				9D2A4291210714F3002B1DA9 /* MyGroupTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
