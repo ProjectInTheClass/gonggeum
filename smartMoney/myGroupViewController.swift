@@ -11,6 +11,7 @@ import UIKit
 class myGroupViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var groupsTable: UITableView!
+    
     var groups : [String] = ["Group1", "Group2", "Group3"]
     
     override func viewDidLoad() {
@@ -41,9 +42,11 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        /*
         if let indexPath = self.groupsTable.indexPathForSelectedRow {
             let selectedData = groups[indexPath.row]
         }
+ */
     }
     
     /*

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */; };
+		9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */; };
+		9D1F0020211198A0007E4B59 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F001F211198A0007E4B59 /* PracticeViewController.swift */; };
 		9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2A428E210712AB002B1DA9 /* Main.storyboard */; };
 		9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */; };
 		9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */; };
@@ -20,6 +23,8 @@
 		9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */; };
 		9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */; };
 		9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413E12110473B00BF8022 /* StoryboardB.storyboard */; };
+		9DE413E421104DA600BF8022 /* addMoneyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */; };
+		9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE413E52110505B00BF8022 /* moneyLogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLogTableViewCell.swift; sourceTree = "<group>"; };
+		9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		9D1F001F211198A0007E4B59 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		9D2A428E210712AB002B1DA9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGroupViewController.swift; sourceTree = "<group>"; };
 		9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGroupViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +67,8 @@
 		9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerModal.swift; sourceTree = "<group>"; };
 		9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardA.storyboard; sourceTree = "<group>"; };
 		9DE413E12110473B00BF8022 /* StoryboardB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
+		9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMoneyLogViewController.swift; sourceTree = "<group>"; };
+		9DE413E52110505B00BF8022 /* moneyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,11 @@
 				9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */,
 				9D922EF620F47F9500BFEFDD /* ViewController.swift */,
 				9D2A428E210712AB002B1DA9 /* Main.storyboard */,
+				9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */,
+				9D1F001F211198A0007E4B59 /* PracticeViewController.swift */,
+				9DE413E52110505B00BF8022 /* moneyLogViewController.swift */,
+				9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */,
+				9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */,
 				9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */,
 				9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */,
 				9D922EFB20F47F9500BFEFDD /* Assets.xcassets */,
@@ -279,12 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */,
+				9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */,
 				9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */,
 				9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */,
 				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
 				9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */,
+				9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */,
 				9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */,
+				9D1F0020211198A0007E4B59 /* PracticeViewController.swift in Sources */,
 				9D922F2920F480EE00BFEFDD /* UIViewControllerKeyboard.swift in Sources */,
+				9DE413E421104DA600BF8022 /* addMoneyLogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
