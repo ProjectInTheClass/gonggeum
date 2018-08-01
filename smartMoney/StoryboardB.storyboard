@@ -13,7 +13,7 @@
         <!--모임별모금목록-->
         <scene sceneID="IDI-jb-4qS">
             <objects>
-                <viewController id="xjG-SP-A0h" userLabel="모임별모금목록" sceneMemberID="viewController">
+                <viewController id="xjG-SP-A0h" userLabel="모임별모금목록" customClass="fundingListTableViewController" customModule="smartMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jjS-3g-2fa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="4069.5999999999999" y="-67.016491754122939"/>
         </scene>
-        <!--View Controller-->
+        <!--New Funding Controller-->
         <scene sceneID="A9R-dC-O6n">
             <objects>
-                <viewController id="sMF-Lw-Sf1" sceneMemberID="viewController">
+                <viewController id="sMF-Lw-Sf1" customClass="newFundingController" customModule="smartMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mdO-cs-1h2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,9 @@
                                 <rect key="frame" x="38" y="20" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="취소"/>
+                                <connections>
+                                    <action selector="modalDismiss:" destination="sMF-Lw-Sf1" eventType="touchUpInside" id="8k9-Nj-RcZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="모금 추가 라벨 받아오기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKq-gs-ktb">
                                 <rect key="frame" x="107" y="24" width="161" height="21"/>
@@ -158,6 +161,9 @@
                                 <rect key="frame" x="329" y="19" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="modalDismiss:" destination="sMF-Lw-Sf1" eventType="touchUpInside" id="5VY-HL-h4y"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5c-pm-JNd">
                                 <rect key="frame" x="171" y="497" width="30" height="21"/>
@@ -189,7 +195,7 @@
         <!--제출자명단-->
         <scene sceneID="qpa-xy-adu">
             <objects>
-                <viewController id="xV9-gN-p0x" userLabel="제출자명단" sceneMemberID="viewController">
+                <viewController id="xV9-gN-p0x" userLabel="제출자명단" customClass="fundingInfoController" customModule="smartMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FbM-9M-GLp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,13 +228,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d8T-j1-IrU">
-                                <rect key="frame" x="139" y="190" width="97" height="29"/>
-                                <segments>
-                                    <segment title="제출"/>
-                                    <segment title="미제출"/>
-                                </segments>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="169-fV-d86">
                                 <rect key="frame" x="166" y="84" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -254,12 +253,25 @@
                                 <rect key="frame" x="-4" y="226" width="379" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xV9-gN-p0x" id="nbx-az-etL"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Now-rm-o5Q">
                                 <rect key="frame" x="178" y="617" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="추가"/>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d8T-j1-IrU">
+                                <rect key="frame" x="137" y="190" width="97" height="29"/>
+                                <segments>
+                                    <segment title="제출"/>
+                                    <segment title="미제출"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChange:" destination="xV9-gN-p0x" eventType="valueChanged" id="m5r-br-7ds"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -268,6 +280,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T3c-kk-02u"/>
                     </view>
+                    <connections>
+                        <outlet property="indexChange" destination="d8T-j1-IrU" id="PMl-eD-DeI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eww-Si-dsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
