@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/*
 struct Account{
     var bankName : String
     var accountNum : String
@@ -15,6 +15,8 @@ struct Account{
     var balance : Int
     
 }
+ */
+
 struct Info{
     var y: Int
     var m: Int
@@ -27,13 +29,13 @@ struct Info{
 }
 
 class groupMoneyInfo{
-    var account : Account
+   
     var infoList : [Info]
     
     init(){
         print("making infoList")
         infoList = []
-        account = Account(bankName : "ㅇㅇ은행", accountNum : "111-111-1111", ownerName : "김미정", balance : 0)
+        
 
     }
     
@@ -52,8 +54,15 @@ class groupMoneyInfo{
 
 
 class moneyLogViewController: UIViewController, UITableViewDataSource {
+    @IBOutlet weak var bankNameLabel: UILabel!
+    @IBOutlet weak var accountNumlabel: UILabel!
+    @IBOutlet weak var ownerLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
     
-    @IBOutlet weak var moneyLogNav: UINavigationBar!
+    
+    @IBOutlet weak var moneyLogNav: UINavigationBar!///////need help
+    
+    var data : String?
     
    
     let group1 = groupMoneyInfo()
@@ -77,6 +86,27 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if let accountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist"), let accountInfo = NSDictionary(contentsOfFile: accountInfoPath)
+            {
+                if let bankName : String = accountInfo["bankName"] as? String{
+                    bankNameLabel.text = bankName
+                }
+                if let accountNum : String = accountInfo["accountNum"] as? String{
+                    accountNumlabel.text = accountNum
+                }
+                if let owner : String = accountInfo["owner"] as? String{
+                    ownerLabel.text = owner
+                }
+                if let balance : Int = accountInfo["balance"] as? Int{
+                    balanceLabel.text = "\(balance)"
+                }
+            }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

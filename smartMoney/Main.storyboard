@@ -250,6 +250,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="mJk-Wb-abJ"/>
+                        <connections>
+                            <outlet property="balanceLabel" destination="LgE-mj-QYe" id="YOE-TX-ju8"/>
+                            <outlet property="bankNameLabel" destination="xou-jO-htN" id="I9r-1M-AZt"/>
+                            <outlet property="ownerLabel" destination="sAe-Dh-pxH" id="egf-Ds-fBY"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GZ9-Rc-1Z7"/>
                     <toolbarItems>

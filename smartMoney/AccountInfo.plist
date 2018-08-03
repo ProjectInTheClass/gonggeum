@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   AccountInfo.plist
-   smartMoney
-
-   Created by cscoi052 on 2018. 8. 3..
-   Copyright (c) 2018년 cscoi052. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>accountNum</key>
+	<string>111-111-1111</string>
+	<key>owner</key>
+	<string>이름없음</string>
+	<key>bankName</key>
+	<string>은행없음</string>
+	<key>balance</key>
+	<integer>0</integer>
+</dict>
 </plist>

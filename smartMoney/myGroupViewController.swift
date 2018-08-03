@@ -43,7 +43,7 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let indexPath = self.groupsTable.indexPathForSelectedRow, let nextVC = segue.destination as? NextViewController{
+        if let indexPath = self.groupsTable.indexPathForSelectedRow, let nextVC = segue.destination as? moneyLogViewController{
             let selectedData = groups[indexPath.row]
             nextVC.data = selectedData
         }
