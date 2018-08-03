@@ -7,15 +7,7 @@
 //
 
 import UIKit
-/*
-struct Account{
-    var bankName : String
-    var accountNum : String
-    var ownerName : String
-    var balance : Int
-    
-}
- */
+
 
 struct Info{
     var y: Int
@@ -35,7 +27,6 @@ class groupMoneyInfo{
     init(){
         print("making infoList")
         infoList = []
-        
 
     }
     
@@ -59,8 +50,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     
-    
-    @IBOutlet weak var moneyLogNav: UINavigationBar!///////need help
+
     
     var data : String?
     
@@ -82,28 +72,37 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         
         cell.when.text = when
         cell.why.text = why
-        cell.balance.text = "0"
+        cell.balance.text = "\(balance)"
         
         return cell
     }
     
     override func viewWillAppear(_ animated: Bool) {
+       print("view appear error?")
         
         if let accountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist"), let accountInfo = NSDictionary(contentsOfFile: accountInfoPath)
             {
+                print(accountInfoPath)
+                print(accountInfo)
+                
                 if let bankName : String = accountInfo["bankName"] as? String{
                     bankNameLabel.text = bankName
                 }
+                
                 if let accountNum : String = accountInfo["accountNum"] as? String{
                     accountNumlabel.text = accountNum
                 }
+                
                 if let owner : String = accountInfo["owner"] as? String{
                     ownerLabel.text = owner
                 }
+                
                 if let balance : Int = accountInfo["balance"] as? Int{
                     balanceLabel.text = "\(balance)"
                 }
+ 
             }
+ 
         
     }
     
