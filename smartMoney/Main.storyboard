@@ -415,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSO-7O-Gmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="261.31934032983509"/>
+            <point key="canvasLocation" x="-532" y="272"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SV1-UD-T31">
@@ -523,7 +523,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rZk-u4-Azc" kind="relationship" relationship="viewControllers" id="LMW-RF-9o1"/>
                         <segue destination="hpM-z8-bGU" kind="relationship" relationship="viewControllers" id="kPT-fX-r9z"/>
                     </connections>
                 </tabBarController>
