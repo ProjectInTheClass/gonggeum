@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */; };
+		9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */; };
 		9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */; };
 		9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */; };
 		9D1F0020211198A0007E4B59 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F001F211198A0007E4B59 /* PracticeViewController.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AccountInfo.plist; sourceTree = "<group>"; };
+		9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLogTableViewCell.swift; sourceTree = "<group>"; };
 		9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		9D1F001F211198A0007E4B59 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */,
 				9D922EF620F47F9500BFEFDD /* ViewController.swift */,
 				9D2A428E210712AB002B1DA9 /* Main.storyboard */,
+				9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */,
 				9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */,
 				9D1F001F211198A0007E4B59 /* PracticeViewController.swift */,
 				9DE413E52110505B00BF8022 /* moneyLogViewController.swift */,
@@ -136,6 +141,7 @@
 				9D922F0020F47F9500BFEFDD /* Info.plist */,
 				9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */,
 				9DE413E12110473B00BF8022 /* StoryboardB.storyboard */,
+				9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */,
 			);
 			path = smartMoney;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			files = (
 				9D922EFF20F47F9500BFEFDD /* LaunchScreen.storyboard in Resources */,
 				9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */,
+				9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */,
 				9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */,
 				9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */,
 				9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */,
@@ -294,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */,
 				9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */,
 				9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */,
 				9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */,

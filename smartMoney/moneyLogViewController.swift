@@ -53,6 +53,7 @@ class groupMoneyInfo{
 
 class moneyLogViewController: UIViewController, UITableViewDataSource {
     
+    @IBOutlet weak var moneyLogNav: UINavigationBar!
     
    
     let group1 = groupMoneyInfo()
@@ -79,11 +80,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        group1.infoList.append(log)
-        group1.infoList.append(log)
-        group1.infoList.append(log)
-        
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
