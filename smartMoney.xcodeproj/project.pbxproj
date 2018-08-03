@@ -20,6 +20,8 @@
 		9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */; };
 		9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */; };
 		9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413E12110473B00BF8022 /* StoryboardB.storyboard */; };
+		A5F92CAE21145F4800727121 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F92CAD21145F4800727121 /* Group.swift */; };
+		A5F92CB021145FBD00727121 /* GroupListEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F92CAF21145FBD00727121 /* GroupListEditController.swift */; };
 		AD05FD0C2111A32200F9E2D6 /* fundingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05FD0B2111A32200F9E2D6 /* fundingListTableViewController.swift */; };
 		AD05FD0E2111A35300F9E2D6 /* newFundingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05FD0D2111A35300F9E2D6 /* newFundingController.swift */; };
 		AD05FD102111A37A00F9E2D6 /* fundingInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05FD0F2111A37A00F9E2D6 /* fundingInfoController.swift */; };
@@ -62,6 +64,8 @@
 		9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerModal.swift; sourceTree = "<group>"; };
 		9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardA.storyboard; sourceTree = "<group>"; };
 		9DE413E12110473B00BF8022 /* StoryboardB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
+		A5F92CAD21145F4800727121 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		A5F92CAF21145FBD00727121 /* GroupListEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListEditController.swift; sourceTree = "<group>"; };
 		AD05FD0B2111A32200F9E2D6 /* fundingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fundingListTableViewController.swift; sourceTree = "<group>"; };
 		AD05FD0D2111A35300F9E2D6 /* newFundingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFundingController.swift; sourceTree = "<group>"; };
 		AD05FD0F2111A37A00F9E2D6 /* fundingInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fundingInfoController.swift; sourceTree = "<group>"; };
@@ -120,12 +124,14 @@
 				9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */,
 				9D922EF620F47F9500BFEFDD /* ViewController.swift */,
 				9D2A428E210712AB002B1DA9 /* Main.storyboard */,
-				9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */,
 				9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */,
 				9D922EFB20F47F9500BFEFDD /* Assets.xcassets */,
 				9D922EFD20F47F9500BFEFDD /* LaunchScreen.storyboard */,
 				9D922F0020F47F9500BFEFDD /* Info.plist */,
 				9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */,
+				9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */,
+				A5F92CAD21145F4800727121 /* Group.swift */,
+				A5F92CAF21145FBD00727121 /* GroupListEditController.swift */,
 				9DE413E12110473B00BF8022 /* StoryboardB.storyboard */,
 				AD05FD0F2111A37A00F9E2D6 /* fundingInfoController.swift */,
 				AD05FD0D2111A35300F9E2D6 /* newFundingController.swift */,
@@ -291,8 +297,10 @@
 				9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */,
 				AD05FD0C2111A32200F9E2D6 /* fundingListTableViewController.swift in Sources */,
 				9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */,
+				A5F92CAE21145F4800727121 /* Group.swift in Sources */,
 				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
 				AD05FD102111A37A00F9E2D6 /* fundingInfoController.swift in Sources */,
+				A5F92CB021145FBD00727121 /* GroupListEditController.swift in Sources */,
 				9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */,
 				9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */,
 				AD05FD0E2111A35300F9E2D6 /* newFundingController.swift in Sources */,
