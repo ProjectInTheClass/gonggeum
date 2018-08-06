@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xjG-SP-A0h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xjG-SP-A0h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,14 +23,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="Etd-fK-Eme">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="A4g-2R-HPf">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VSo-DG-h8W">
-                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="펀딩추가"/>
-                                            </button>
+                                        <barButtonItem key="rightBarButtonItem" title="펀딩추가" id="1cl-IA-eFa">
                                             <connections>
-                                                <segue destination="sMF-Lw-Sf1" kind="presentation" id="YE0-fM-I9e"/>
+                                                <segue destination="sMF-Lw-Sf1" kind="presentation" id="SKa-1N-HWM"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -65,14 +60,12 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="xV9-gN-p0x" kind="show" id="R7e-Md-Q4h">
-                                                <nil key="action"/>
-                                            </segue>
+                                            <segue destination="xV9-gN-p0x" kind="show" id="R7e-Md-Q4h"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="xjG-SP-A0h" id="WVY-Hg-VGf"/>
+                                    <outlet property="dataSource" destination="xjG-SP-A0h" id="xa4-4S-3Lb"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -83,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Az-yO-tC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4069.5999999999999" y="-67.016491754122939"/>
+            <point key="canvasLocation" x="3887" y="-81"/>
         </scene>
         <!--New Funding Controller-->
         <scene sceneID="A9R-dC-O6n">
@@ -135,6 +128,12 @@
                                 <date key="date" timeIntervalSinceReferenceDate="554196919.32646704">
                                     <!--2018-07-25 07:35:19 +0000-->
                                 </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePick:" destination="sMF-Lw-Sf1" eventType="valueChanged" id="BD2-wQ-Xek"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="행사명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75b-HI-9rE">
                                 <rect key="frame" x="160" y="99" width="45" height="21"/>
@@ -162,7 +161,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="확인"/>
                                 <connections>
-                                    <action selector="modalDismiss:" destination="sMF-Lw-Sf1" eventType="touchUpInside" id="5VY-HL-h4y"/>
+                                    <action selector="saveButton:" destination="sMF-Lw-Sf1" eventType="touchUpInside" id="tVF-R5-QFt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5c-pm-JNd">
@@ -177,6 +176,10 @@
                         <viewLayoutGuide key="safeArea" id="u07-km-WOo"/>
                     </view>
                     <connections>
+                        <outlet property="fundingNameTF" destination="nf9-21-3Vp" id="b49-kD-tDH"/>
+                        <outlet property="moneyTF" destination="KZr-Mk-Rxb" id="nVD-FO-ocz"/>
+                        <outlet property="moreTF" destination="MtO-ec-cmu" id="w7j-Fa-GbP"/>
+                        <outlet property="pickerView" destination="f3s-1o-xbO" id="gLo-rs-9N0"/>
                         <outlet property="searchDisplayController" destination="2Nv-sB-MId" id="76z-Gh-eWZ"/>
                     </connections>
                 </viewController>
