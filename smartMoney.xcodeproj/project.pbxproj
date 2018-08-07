@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C5DABBC21183A7000FCBE8A /* arrayFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5DABBB21183A7000FCBE8A /* arrayFile.swift */; };
+		6C5DABBE21183D5400FCBE8A /* fundingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5DABBD21183D5400FCBE8A /* fundingListTableViewController.swift */; };
 		9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2A428E210712AB002B1DA9 /* Main.storyboard */; };
 		9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */; };
 		9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */; };
@@ -20,7 +22,6 @@
 		9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */; };
 		9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */; };
 		9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413E12110473B00BF8022 /* StoryboardB.storyboard */; };
-		AD05FD0C2111A32200F9E2D6 /* fundingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05FD0B2111A32200F9E2D6 /* fundingListTableViewController.swift */; };
 		AD05FD0E2111A35300F9E2D6 /* newFundingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05FD0D2111A35300F9E2D6 /* newFundingController.swift */; };
 		AD05FD102111A37A00F9E2D6 /* fundingInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05FD0F2111A37A00F9E2D6 /* fundingInfoController.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C5DABBB21183A7000FCBE8A /* arrayFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arrayFile.swift; sourceTree = "<group>"; };
+		6C5DABBD21183D5400FCBE8A /* fundingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fundingListTableViewController.swift; sourceTree = "<group>"; };
 		9D2A428E210712AB002B1DA9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGroupViewController.swift; sourceTree = "<group>"; };
 		9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGroupViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerModal.swift; sourceTree = "<group>"; };
 		9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardA.storyboard; sourceTree = "<group>"; };
 		9DE413E12110473B00BF8022 /* StoryboardB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
-		AD05FD0B2111A32200F9E2D6 /* fundingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fundingListTableViewController.swift; sourceTree = "<group>"; };
 		AD05FD0D2111A35300F9E2D6 /* newFundingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFundingController.swift; sourceTree = "<group>"; };
 		AD05FD0F2111A37A00F9E2D6 /* fundingInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fundingInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,8 +130,9 @@
 				9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */,
 				9DE413E12110473B00BF8022 /* StoryboardB.storyboard */,
 				AD05FD0F2111A37A00F9E2D6 /* fundingInfoController.swift */,
+				6C5DABBD21183D5400FCBE8A /* fundingListTableViewController.swift */,
 				AD05FD0D2111A35300F9E2D6 /* newFundingController.swift */,
-				AD05FD0B2111A32200F9E2D6 /* fundingListTableViewController.swift */,
+				6C5DABBB21183A7000FCBE8A /* arrayFile.swift */,
 			);
 			path = smartMoney;
 			sourceTree = "<group>";
@@ -289,14 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */,
-				AD05FD0C2111A32200F9E2D6 /* fundingListTableViewController.swift in Sources */,
 				9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */,
 				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
 				AD05FD102111A37A00F9E2D6 /* fundingInfoController.swift in Sources */,
 				9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */,
 				9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */,
 				AD05FD0E2111A35300F9E2D6 /* newFundingController.swift in Sources */,
+				6C5DABBE21183D5400FCBE8A /* fundingListTableViewController.swift in Sources */,
 				9D922F2920F480EE00BFEFDD /* UIViewControllerKeyboard.swift in Sources */,
+				6C5DABBC21183A7000FCBE8A /* arrayFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

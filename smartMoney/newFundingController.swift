@@ -18,6 +18,7 @@ struct Funding : Codable{
     
 }
 
+
 class newFundingController: UIViewController {
     var date : String = ""
     
@@ -61,17 +62,7 @@ class newFundingController: UIViewController {
     
     func saveData() {
         let info = Funding(name : fundingNameTF.text!, money :  moneyTF.text!, dueDate : date, more : moreTF.text!, yesMember: [], noMember: [])
-        let encoder = JSONEncoder()
-        do{
-            let encodedData : Data = try encoder.encode(info)
-            let filePath = NSHomeDirectory() + "/Documents/fundinglist.json"
-            let url = URL(fileURLWithPath : filePath)
-            try encodedData.write(to : url)
-            print("Save Success")
-        
-        }catch let error{
-            print("ERROR:  +\(error)")
-        }
+        fundingList += [info]
     }
     
     override func viewDidLoad() {
