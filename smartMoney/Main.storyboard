@@ -407,11 +407,20 @@
                                     <action selector="saveNewLog:" destination="4P0-g7-5BZ" eventType="touchUpInside" id="Q95-dd-QmN"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eWz-jE-Cbn">
+                                <rect key="frame" x="56" y="263" width="75" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="입금"/>
+                                    <segment title="출금"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="V06-Mj-0zd"/>
                     </view>
                     <connections>
+                        <outlet property="InOut" destination="eWz-jE-Cbn" id="s1f-Fo-kHE"/>
                         <outlet property="date" destination="pNh-v1-1Ur" id="MxW-ta-uzm"/>
                         <outlet property="eventName" destination="3yf-UD-GnX" id="gmB-if-JRn"/>
                         <outlet property="evidenceImage" destination="rV3-rG-nQK" id="xFp-1R-cB1"/>

@@ -8,6 +8,18 @@
 
 import UIKit
 
+
+struct MoneyLog: Codable{
+    var y: Int
+    var m: Int
+    var d: Int
+    var eventName: String
+    var money: Int
+    var memo: String
+    var InOut: Int
+    //evidence info? image? string?
+}
+
 class addMoneyLogViewController: UIViewController {
 
     @IBOutlet weak var date: UIDatePicker!
@@ -15,6 +27,7 @@ class addMoneyLogViewController: UIViewController {
     @IBOutlet weak var howMuch: UITextField!
     @IBOutlet weak var memo: UITextField!
     @IBOutlet weak var evidenceImage: UIImageView!
+    @IBOutlet weak var InOut: UISegmentedControl!
     
     
     
@@ -23,7 +36,38 @@ class addMoneyLogViewController: UIViewController {
     }
     
     @IBAction func saveNewLog(_ sender: Any) {
+        let filePath = NSHomeDirectory() + "/Documents/moneyLog.json"
+        let fileUrl = URL(fileURLWithPath: filePath)
         let encoder = JSONEncoder()
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        let year: Int = Int(dateFormatter.string(from: self.date.date))!
+        dateFormatter.dateFormat = "MM"
+        let month: Int = Int(dateFormatter.string(from: self.date.date))!
+        dateFormatter.dateFormat = "dd"
+        let day: Int = Int(dateFormatter.string(from: self.date.date))!
+        
+        //checking in or out
+        var IsIn: Int = 0
+        if InOut.selectedSegmentIndex == 0{
+            IsIn = 1
+        }
+        else if InOut.selectedSegmentIndex == 1{
+            IsIn = -1
+        }
+       
+        
+        if let en = eventName.text, let hm = howMuch.text, let mm = memo.text{
+        let log = MoneyLog(y: year, m: month, d: day, eventName: en, money: hm, memo: mm, InOut: IsIn)
+        }
+        
+        if let data = try? encoder.encode(log) {
+            try! data.write(to: fileUrl)
+        }
+        
+        
         
         
         

@@ -9,16 +9,7 @@
 import UIKit
 
 
-struct MoneyLog: Codable{
-    var y: Int
-    var m: Int
-    var d: Int
-    var eventName: String
-    var money: Int
-    var memo: String
-    var inOut: Bool
-    //evidence info? image? string?
-}
+
 
 class groupMoneyInfo{
    
