@@ -34,21 +34,11 @@ class groupMoneyInfo{
         logList.append(newinfo)
     }
     
-    /*
-     func deleteInfo(target: Info) -> Info {
-     
-     }
-     */
-    
-    
 }
 
 
 class moneyLogViewController: UIViewController, UITableViewDataSource {
-    @IBOutlet weak var bankNameLabel: UILabel!
-    @IBOutlet weak var accountNumlabel: UILabel!
-    @IBOutlet weak var ownerLabel: UILabel!
-    @IBOutlet weak var balanceLabel: UILabel!
+ 
     
     //앞선 단계에서 보내온 데이터를 받기 위함.
     var data : String?
@@ -83,22 +73,22 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
             {
                 print(accountInfoPath)
                 print(accountInfo)
+//
+//                if let bankName : String = accountInfo["bankName"] as? String{
+//                    bankNameLabel.text = bankName
+//                }
+//
+//                if let accountNum : String = accountInfo["accountNum"] as? String{
+//                    accountNumlabel.text = accountNum
+//                }
+//
+//                if let owner : String = accountInfo["owner"] as? String{
+//                    ownerLabel.text = owner
+//                }
                 
-                if let bankName : String = accountInfo["bankName"] as? String{
-                    bankNameLabel.text = bankName
-                }
-                
-                if let accountNum : String = accountInfo["accountNum"] as? String{
-                    accountNumlabel.text = accountNum
-                }
-                
-                if let owner : String = accountInfo["owner"] as? String{
-                    ownerLabel.text = owner
-                }
-                
-                if let balance : Int = accountInfo["balance"] as? Int{
-                    balanceLabel.text = "\(balance)"
-                }
+                //if let balance : Int = accountInfo["balance"] as? Int{
+                //    balanceLabel.text = "\(balance)"
+                //}
  
             }
  

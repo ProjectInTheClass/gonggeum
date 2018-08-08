@@ -10,6 +10,26 @@ import UIKit
 
 class addMoneyLogViewController: UIViewController {
 
+    @IBOutlet weak var date: UIDatePicker!
+    @IBOutlet weak var eventName: UITextField!
+    @IBOutlet weak var howMuch: UITextField!
+    @IBOutlet weak var memo: UITextField!
+    @IBOutlet weak var evidenceImage: UIImageView!
+    
+    
+    
+    @IBAction func cancelAdding(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveNewLog(_ sender: Any) {
+        let encoder = JSONEncoder()
+        
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
