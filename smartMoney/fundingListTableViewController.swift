@@ -2,28 +2,22 @@
 //  fundingListTableViewController.swift
 //  smartMoney
 //
-//  Created by cscoi055 on 2018. 8. 1..
+//  Created by cscoi030 on 2018. 8. 6..
 //  Copyright © 2018년 cscoi052. All rights reserved.
 //
 
 import UIKit
 
-class fundingListTableViewController: UIViewController, UITableViewDataSource {
-    
+class fundingListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
-        let filePath = NSHomeDirectory() + "/Documents/fundinglist.json"
-        
+        self.tableView.reloadData()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,23 +27,37 @@ class fundingListTableViewController: UIViewController, UITableViewDataSource {
 
     // MARK: - Table view data source
 
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return fundingList.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fundingCell", for: indexPath)
 
-        // Configure the cell...
+        let item = fundingList[indexPath.row]
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = item.dueDate
+        
 
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if let indexPath = tableView.indexPathForSelectedRow,
+        let detailVC = segue.destination as? fundingInfoController{
+        let selectedfund : Funding = fundingList[indexPath.row]
+        detailVC.getFunding = selectedfund
+        }
+    }
+
+    
 
 
 }

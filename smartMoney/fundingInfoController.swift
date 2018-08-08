@@ -8,9 +8,51 @@
 
 import UIKit
 
-class fundingInfoController: UIViewController {
-
-   
+class fundingInfoController: UIViewController, UITableViewDataSource {
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        return cell
+    }
+    
+  
+    
+    var getFunding : Funding?
+    
+    
+  
+    @IBOutlet weak var yesNoSegment: UISegmentedControl!
+    @IBOutlet weak var fundingName: UINavigationItem!
+    @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var duedayLabel: UILabel!
+    @IBOutlet weak var moreLabel: UILabel!
+    
+    @IBAction func changeContent(_ sender: Any) {
+        if yesNoSegment.selectedSegmentIndex == 0{
+            print("제출자 명단 선택")
+            
+            
+        }
+        else {
+            print("미제출자 명단 선택")
+        }
+    }
+    
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+       fundingName.title = getFunding?.name
+        moneyLabel.text = getFunding?.money
+        duedayLabel.text = getFunding?.dueDate
+        moreLabel.text = getFunding?.more
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +66,5 @@ class fundingInfoController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
