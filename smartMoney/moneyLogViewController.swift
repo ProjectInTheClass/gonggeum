@@ -9,38 +9,16 @@
 import UIKit
 
 
-
-
-class groupMoneyInfo{
-   
-    var logList : [MoneyLog]
-    
-    init(){
-        print("making infoList")
-        logList = []
-
-    }
-    
-    func addInfo(newinfo : MoneyLog) {
-        logList.append(newinfo)
-    }
-    
-}
-
-
 class moneyLogViewController: UIViewController, UITableViewDataSource {
  
     
     //앞선 단계에서 보내온 데이터를 받기 위함.
     var data : String?
     
-   
-    let group1 = groupMoneyInfo()
-    var log  = MoneyLog(y : 2018, m : 1, d : 1, eventName : "MT", money : 10000, memo : "5명 참석", inOut : true)
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return group1.logList.count
+        return 1
+        //return group1.logList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
