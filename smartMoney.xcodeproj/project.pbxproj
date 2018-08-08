@@ -120,8 +120,8 @@
 				9D922F2820F480EE00BFEFDD /* UIViewControllerKeyboard.swift */,
 				9D922EF420F47F9500BFEFDD /* AppDelegate.swift */,
 				9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */,
-				9D922EF620F47F9500BFEFDD /* ViewController.swift */,
 				9D2A428E210712AB002B1DA9 /* Main.storyboard */,
+				9D922EF620F47F9500BFEFDD /* ViewController.swift */,
 				9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */,
 				9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */,
 				9D922EFB20F47F9500BFEFDD /* Assets.xcassets */,
@@ -237,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9D922EEC20F47F9500BFEFDD /* Build configuration list for PBXProject "smartMoney" */;
+			buildConfigurationList = 9D922EEC20F47F9500BFEFDD /* Build configuration list for PBXProject "smartMoney 복사본 2" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -547,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9D922EEC20F47F9500BFEFDD /* Build configuration list for PBXProject "smartMoney" */ = {
+		9D922EEC20F47F9500BFEFDD /* Build configuration list for PBXProject "smartMoney 복사본 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D922F1720F47F9500BFEFDD /* Debug */,
