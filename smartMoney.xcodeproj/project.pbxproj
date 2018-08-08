@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C9071C3211ACCF30054FF10 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9071C2211ACCF30054FF10 /* Group.swift */; };
+		0C9071C5211ACCFE0054FF10 /* GroupListEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9071C4211ACCFE0054FF10 /* GroupListEditController.swift */; };
+		0C9071C8211ACD1C0054FF10 /* groupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9071C6211ACD1C0054FF10 /* groupCellTableViewCell.swift */; };
+		0C9071C9211ACD1C0054FF10 /* memberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9071C7211ACD1C0054FF10 /* memberCellTableViewCell.swift */; };
+		0C9071CB211ACD630054FF10 /* searchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9071CA211ACD630054FF10 /* searchGroupViewController.swift */; };
 		9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */; };
 		9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */; };
 		9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */; };
@@ -14,7 +19,6 @@
 		9D1F0020211198A0007E4B59 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F001F211198A0007E4B59 /* PracticeViewController.swift */; };
 		9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2A428E210712AB002B1DA9 /* Main.storyboard */; };
 		9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */; };
-		9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */; };
 		9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922EF420F47F9500BFEFDD /* AppDelegate.swift */; };
 		9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D922EF620F47F9500BFEFDD /* ViewController.swift */; };
 		9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D922EFB20F47F9500BFEFDD /* Assets.xcassets */; };
@@ -47,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C9071C2211ACCF30054FF10 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = ../../TETETE/TETETE/Group.swift; sourceTree = "<group>"; };
+		0C9071C4211ACCFE0054FF10 /* GroupListEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupListEditController.swift; path = ../../TETETE/TETETE/GroupListEditController.swift; sourceTree = "<group>"; };
+		0C9071C6211ACD1C0054FF10 /* groupCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = groupCellTableViewCell.swift; path = ../../TETETE/TETETE/groupCellTableViewCell.swift; sourceTree = "<group>"; };
+		0C9071C7211ACD1C0054FF10 /* memberCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = memberCellTableViewCell.swift; path = ../../TETETE/TETETE/memberCellTableViewCell.swift; sourceTree = "<group>"; };
+		0C9071CA211ACD630054FF10 /* searchGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = searchGroupViewController.swift; path = ../../TETETE/TETETE/searchGroupViewController.swift; sourceTree = "<group>"; };
 		9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AccountInfo.plist; sourceTree = "<group>"; };
 		9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLogTableViewCell.swift; sourceTree = "<group>"; };
@@ -54,7 +63,6 @@
 		9D1F001F211198A0007E4B59 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		9D2A428E210712AB002B1DA9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGroupViewController.swift; sourceTree = "<group>"; };
-		9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGroupViewController.swift; sourceTree = "<group>"; };
 		9D922EF120F47F9500BFEFDD /* smartMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smartMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D922EF420F47F9500BFEFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D922EF620F47F9500BFEFDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,12 +142,16 @@
 				9DE413E52110505B00BF8022 /* moneyLogViewController.swift */,
 				9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */,
 				9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */,
-				9D3F9EDD210F0ECA00F10781 /* searchGroupViewController.swift */,
 				9D3F9EDB210F03DC00F10781 /* myGroupViewController.swift */,
 				9D922EFB20F47F9500BFEFDD /* Assets.xcassets */,
 				9D922EFD20F47F9500BFEFDD /* LaunchScreen.storyboard */,
 				9D922F0020F47F9500BFEFDD /* Info.plist */,
 				9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */,
+				0C9071CA211ACD630054FF10 /* searchGroupViewController.swift */,
+				0C9071C6211ACD1C0054FF10 /* groupCellTableViewCell.swift */,
+				0C9071C7211ACD1C0054FF10 /* memberCellTableViewCell.swift */,
+				0C9071C4211ACCFE0054FF10 /* GroupListEditController.swift */,
+				0C9071C2211ACCF30054FF10 /* Group.swift */,
 				9DE413E12110473B00BF8022 /* StoryboardB.storyboard */,
 				9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */,
 			);
@@ -303,12 +315,16 @@
 			files = (
 				9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */,
 				9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */,
+				0C9071C8211ACD1C0054FF10 /* groupCellTableViewCell.swift in Sources */,
+				0C9071C9211ACD1C0054FF10 /* memberCellTableViewCell.swift in Sources */,
 				9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */,
-				9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */,
 				9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */,
+				0C9071CB211ACD630054FF10 /* searchGroupViewController.swift in Sources */,
 				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
+				0C9071C3211ACCF30054FF10 /* Group.swift in Sources */,
 				9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */,
 				9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */,
+				0C9071C5211ACCFE0054FF10 /* GroupListEditController.swift in Sources */,
 				9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */,
 				9D1F0020211198A0007E4B59 /* PracticeViewController.swift in Sources */,
 				9D922F2920F480EE00BFEFDD /* UIViewControllerKeyboard.swift in Sources */,
