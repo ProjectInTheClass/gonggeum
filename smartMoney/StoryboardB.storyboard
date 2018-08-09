@@ -236,9 +236,51 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="추가"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9GT-8m-vLh">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K4I-DI-7kz">
+                                <rect key="frame" x="127" y="183" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="제출"/>
+                                    <segment title="미제출"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeContent:" destination="6qi-Ew-v0M" eventType="valueChanged" id="oX8-BY-6IK"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ozf-5x-iUu">
                                 <rect key="frame" x="0.0" y="226" width="375" height="383"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.8993389423" green="0.1134331539" blue="0.041582569940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" textLabel="1On-ck-dUY" style="IBUITableViewCellStyleDefault" id="CUB-2Y-cL8">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CUB-2Y-cL8" id="Arr-h6-0NV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1On-ck-dUY">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6qi-Ew-v0M" id="XGh-Ll-l4h"/>
+                                    <outlet property="delegate" destination="6qi-Ew-v0M" id="gbe-ZI-Noj"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9GT-8m-vLh">
+                                <rect key="frame" x="0.0" y="226" width="375" height="383"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" textLabel="af6-qY-l9N" style="IBUITableViewCellStyleDefault" id="UDm-4q-dnJ">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -260,25 +302,11 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="6qi-Ew-v0M" id="GJr-g4-psT"/>
+                                    <outlet property="delegate" destination="6qi-Ew-v0M" id="mT2-mm-JsV"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K4I-DI-7kz">
-                                <rect key="frame" x="127" y="183" width="121" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="제출"/>
-                                    <segment title="미제출"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changeContent:" destination="6qi-Ew-v0M" eventType="valueChanged" id="oX8-BY-6IK"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9GT-8m-vLh" firstAttribute="trailing" secondItem="EfE-Py-Edq" secondAttribute="trailing" id="HNa-e8-KOF"/>
-                            <constraint firstItem="9GT-8m-vLh" firstAttribute="leading" secondItem="EfE-Py-Edq" secondAttribute="leading" id="HWV-WW-Shk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EfE-Py-Edq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Z5M-mn-MbU"/>
@@ -287,7 +315,9 @@
                         <outlet property="fundingName" destination="Z5M-mn-MbU" id="1xc-DM-4ke"/>
                         <outlet property="moneyLabel" destination="cmy-7M-KIo" id="Dbu-ck-jPs"/>
                         <outlet property="moreLabel" destination="ty9-Sg-4Gw" id="9hH-ET-ioa"/>
+                        <outlet property="noView" destination="ozf-5x-iUu" id="blO-7K-8tj"/>
                         <outlet property="yesNoSegment" destination="K4I-DI-7kz" id="NiV-fR-giW"/>
+                        <outlet property="yesView" destination="9GT-8m-vLh" id="gHD-HO-rAV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13q-h2-ZE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
