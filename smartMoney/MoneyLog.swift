@@ -64,15 +64,19 @@ func loadLog(){
     print(currentGroupLogs)
     
     if let data = try? Data.init(contentsOf: LogJsonUrl), let infosFromFile = try? decoder.decode([GroupInfo].self, from: data){
-        print (infosFromFile[1])
         print("개수 : ", infosFromFile.count)
-        GroupInfos = infosFromFile
-        
+        if infosFromFile.count > 0 {
+            GroupInfos = infosFromFile
+            currentGroupLogs = infosFromFile[0].logs
+        }
+        else {
+            currentGroup = "test group"
+            currentGroupLogs = [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]
+        }
         
         //initialize current Group to first group in JSON file
-        currentGroup = infosFromFile[0].name
+        //currentGroup = infosFromFile[0].name
         print("current Group : ", currentGroup)
-        currentGroupLogs = infosFromFile[0].logs
         print("current Group Logs : ", currentGroupLogs)
     }
     

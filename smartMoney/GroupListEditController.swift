@@ -41,7 +41,7 @@ class GroupListEditController: UIViewController, UITableViewDataSource, UITableV
     }
     
     // 취소 모달(Alertview) 관련 시작
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func addCancel(_ sender: Any) {
         
         self.groupName.resignFirstResponder()
         
@@ -67,57 +67,58 @@ class GroupListEditController: UIViewController, UITableViewDataSource, UITableV
         alertController.addAction(noAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    // 취소 모달(Alertview) 관련 끝
-    
+
     // 저장 관련 시작
-//    @IBAction func save(_ sender: Any) {
-//
-//        // custom cell,
-//        for i in 0..<cellcount{
-//            let indexPath = IndexPath(row: i, section: 0)
-//            let cell = groupTable.cellForRow(at: indexPath) as? memberCellTableViewCell
-//            cell?.groupMemberAdd.text
-//            memberData.append((cell?.groupMemberAdd.text)!)
-//        }
-//
-//        self.groupName.resignFirstResponder()
-//
-//        if self.groupName.text?.isEmpty == true
-//        {
-//            self.dismiss(animated: true, completion: nil)
-//            return
-//        }
-//
-//        // 저장 관련 주의! 미구현
-//        //        let yesActionsave = UIAlertAction(title: "NO", style: .destructive) { _ in
-//        //            self.dismiss(animated: true, completion: nil)
-//        //        }
-//        //        let noActionsave = UIAlertAction(title: "YES", style: .default) { _ in
-//        //            self.groupName.becomeFirstResponder()
-//        //        }
-//        //
-//        //        let alertController = UIAlertController(
-//        //            title: "확인!",
-//        //            message: "현재 내용을 저장하시겠습니까?",
-//        //            preferredStyle: .alert
-//        //        )
-//        //
-//        //        alertController.addAction(yesAction)
-//        //        alertController.addAction(noAction)
-//        //        self.present(alertController, animated: true, completion: nil)
-//
-//        let newGroup = Group(title: groupName.text!)
-//        newGroup.members = memberData
-//        self.addInfo?(newGroup)
-//        print(newGroup.title)
-//        print(newGroup.members)
-//
-//        self.dismiss(animated: true, completion: nil)
-//    }
-//    // 저장 관련 끝
+    @IBAction func addSave(_ sender: Any) {
+        // custom cell,
+        for i in 0..<cellcount{
+            let indexPath = IndexPath(row: i, section: 0)
+            let cell = groupTable.cellForRow(at: indexPath) as? memberCellTableViewCell
+            cell?.groupMemberAdd.text
+            memberData.append((cell?.groupMemberAdd.text)!)
+        }
+        
+        self.groupName.resignFirstResponder()
+        
+        if self.groupName.text?.isEmpty == true
+        {
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
+        
+        // 저장 관련 주의! 미구현
+        //        let yesActionsave = UIAlertAction(title: "NO", style: .destructive) { _ in
+        //            self.dismiss(animated: true, completion: nil)
+        //        }
+        //        let noActionsave = UIAlertAction(title: "YES", style: .default) { _ in
+        //            self.groupName.becomeFirstResponder()
+        //        }
+        //
+        //        let alertController = UIAlertController(
+        //            title: "확인!",
+        //            message: "현재 내용을 저장하시겠습니까?",
+        //            preferredStyle: .alert
+        //        )
+        //
+        //        alertController.addAction(yesAction)
+        //        alertController.addAction(noAction)
+        //        self.present(alertController, animated: true, completion: nil)
+        
+        let newGroup = Group(title: groupName.text!)
+        newGroup.members = memberData
+        self.addInfo?(newGroup)
+        print(newGroup.title)
+        print(newGroup.members)
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    // 저장 관련 끝
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.groupTable.separatorStyle = UITableViewCellSeparatorStyle.none
         
         // Do any additional setup after loading the view.
     }

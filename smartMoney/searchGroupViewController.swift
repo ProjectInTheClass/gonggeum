@@ -15,17 +15,33 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var groupSearchBar: UISearchBar!
     @IBOutlet weak var searchTable: UITableView!
     
+    @IBAction func groupAddCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func groupAdd(_ sender: Any) {
+        if let indexPath = searchTable.indexPathForSelectedRow {
+            let selectedGroup = groups[indexPath.row]
+            grouplist.append(selectedGroup)
+            self.dismiss(animated: true, completion: nil)
+        }
+        else {
+            let alertController = UIAlertController(
+                title: "주의!",
+                message: "선택된 모임이 없습니다.",
+                preferredStyle: .alert
+            )
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+    }
+
     // search bar 필요 변수
     var filteredData : [Group] = []
     
     var searchActive = false
     
     // group 목록
-    var groups = [Group]() {
-        didSet {
-            self.saveAll()
-        }
-    }
+    var groups = [Group]()
     
     // group 저장 관련 시작
     func saveAll() {
@@ -53,26 +69,27 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
             }
             return Group(title: title)
         }
+        self.groups = [
+            Group(title:"자동차"),
+            Group(title:"음악")
+        ]
     }
     // group 불러오기 관련 끝
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true
         searchBar.showsCancelButton = true // 취소버튼 보이기
-        print("여기")
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchActive = false
         searchTable.reloadData()
-        print("저기")
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false
         searchBar.showsCancelButton = false // 취소버튼 관련
         searchTable.reloadData()
-        print("요기")
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -99,8 +116,8 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         }
         return cell
     }
-    //
-    //    // searchBar 관련 시작
+
+    // searchBar 관련 시작
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard !searchText.isEmpty else {
             searchTable.reloadData()
@@ -111,9 +128,6 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         })
         searchTable.reloadData()
     }
-    //
-    //
-    
     // searchBar 관련 끝
     
     override func viewDidLoad() {
@@ -125,15 +139,6 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         groupSearchBar.delegate = self
         self.groupSearchBar.placeholder = "모임 검색"
         
-        //        self.filteredData = [self.groups[0].title]
-        //        print(self.groups[0].title)
-        //
-        //        if groups.count != 0{
-        //            for i in 0..groups.count{
-        //            filteredData.append(self.groups[i].title)
-        //            }
-        //        }
-        
         self.loadAll()
         
     }
@@ -144,8 +149,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navigationController = segue.destination as? UINavigationController,
-            let groupEditorViewController = navigationController.viewControllers.first as? GroupListEditController {
+        if let groupEditorViewController = segue.destination as? GroupListEditController {
             groupEditorViewController.addInfo = { group in
                 self.groups.append(group)
                 self.searchTable.reloadData()
