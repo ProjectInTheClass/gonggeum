@@ -10,6 +10,13 @@ import UIKit
 
 
 class moneyLogViewController: UIViewController, UITableViewDataSource {
+    //공금계좌 정보 라벨
+    
+    @IBOutlet weak var bankNameLabel: UILabel!
+    @IBOutlet weak var ownerLabel: UILabel!
+    @IBOutlet weak var accountNumLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
+    
     
     var rowNum : Int = logs.count
     
@@ -26,14 +33,16 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moneyLogCell", for: indexPath) as! moneyLogTableViewCell
         
-        
-        let when : String = "1"
-        let why : String = "hi"
-        let balance: Int = 1
+        let logForCell = logs[(logs.count-1) - indexPath.row]
+        let when : String = "\(logForCell.y)" + "." +
+                            "\(logForCell.m)" + "." +
+                            "\(logForCell.d)"
+        let why : String = logForCell.eventName
+        let InOutMoney : Int = logForCell.money * logForCell.InOut
         
         cell.when.text = when
         cell.why.text = why
-        cell.balance.text = "\(balance)"
+        cell.balance.text = "\(InOutMoney)"
         
         return cell
     }
@@ -44,22 +53,22 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         if let accountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist"), let accountInfo = NSDictionary(contentsOfFile: accountInfoPath)
             {
                 print(accountInfo)
-//
-//                if let bankName : String = accountInfo["bankName"] as? String{
-//                    bankNameLabel.text = bankName
-//                }
-//
-//                if let accountNum : String = accountInfo["accountNum"] as? String{
-//                    accountNumlabel.text = accountNum
-//                }
-//
-//                if let owner : String = accountInfo["owner"] as? String{
-//                    ownerLabel.text = owner
-//                }
+
+                if let bankName : String = accountInfo["bankName"] as? String{
+                    bankNameLabel.text = bankName
+                }
+
+                if let accountNum : String = accountInfo["accountNum"] as? String{
+                    accountNumLabel.text = accountNum
+                }
+
+                if let owner : String = accountInfo["owner"] as? String{
+                    ownerLabel.text = owner
+                }
                 
-                //if let balance : Int = accountInfo["balance"] as? Int{
-                //    balanceLabel.text = "\(balance)"
-                //}
+                if let balance : Int = accountInfo["balance"] as? Int{
+                    balanceLabel.text = "\(balance)"
+                }
  
             }
  
@@ -78,6 +87,13 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     }
     
 
+    
+    //plist 수정 관려!!!!
+    //테이블 로딩 안 되는 거 관련!!
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

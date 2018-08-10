@@ -113,6 +113,7 @@ class GroupListEditController: UIViewController, UITableViewDataSource, UITableV
         self.dismiss(animated: true, completion: nil)
     }
     // 저장 관련 끝
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
