@@ -13,6 +13,7 @@ class moneyLogTableViewCell: UITableViewCell {
     @IBOutlet weak var when: UILabel!
     @IBOutlet weak var why: UILabel!
     @IBOutlet weak var balance: UILabel!
+    @IBOutlet weak var balanceThen: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
