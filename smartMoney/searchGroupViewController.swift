@@ -40,12 +40,9 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     
     var searchActive = false
     
-    // group 목록
-    var groups = [Group]()
-    
     // group 저장 관련 시작
     func saveAll() {
-        let data = self.groups.map {
+        let data = groups.map {
             [
                 "title": $0.title,
                 ]
@@ -63,16 +60,12 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         guard let data = userDefaults.object(forKey: groupDefaultsKey) as? [[String: AnyObject]] else {
             return
         }
-        self.groups = data.flatMap {
+        groups = data.flatMap {
             guard let title = $0["title"] as? String else {
                 return nil
             }
             return Group(title: title)
         }
-        self.groups = [
-            Group(title:"자동차"),
-            Group(title:"음악")
-        ]
     }
     // group 불러오기 관련 끝
     
@@ -111,7 +104,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
             cell.textLabel?.text = filteredData[indexPath.row].title
         }
         else{
-            let group = self.groups[indexPath.row]
+            let group = groups[indexPath.row]
             cell.textLabel?.text = group.title
         }
         return cell
@@ -151,7 +144,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let groupEditorViewController = segue.destination as? GroupListEditController {
             groupEditorViewController.addInfo = { group in
-                self.groups.append(group)
+                groups.append(group)
                 self.searchTable.reloadData()
             }
         }
