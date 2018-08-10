@@ -689,14 +689,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="bcF-Ev-SDg">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="AQy-an-94y">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZE9-2X-LnV">
-                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="모임추가"/>
-                                            </button>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="PHY-3A-hKL">
                                             <connections>
-                                                <segue destination="CmF-Fr-eVP" kind="presentation" id="BxB-fm-wZZ"/>
+                                                <segue destination="JBy-S6-pkm" kind="presentation" id="2hL-rw-hOM"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -746,12 +741,12 @@
             <point key="canvasLocation" x="1598" y="261"/>
         </scene>
         <!--StoryboardA-->
-        <scene sceneID="sNT-zN-VnI">
+        <scene sceneID="Roi-z9-dlX">
             <objects>
-                <viewControllerPlaceholder storyboardName="StoryboardA" id="CmF-Fr-eVP" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FZB-ad-5uU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="StoryboardA" id="JBy-S6-pkm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMs-MT-41t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2319" y="-255"/>
+            <point key="canvasLocation" x="2170" y="-27"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ghZ-0f-bYF">

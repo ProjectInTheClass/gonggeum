@@ -41,7 +41,7 @@ class GroupListEditController: UIViewController, UITableViewDataSource, UITableV
     }
     
     // 취소 모달(Alertview) 관련 시작
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func addCancel(_ sender: Any) {
         
         self.groupName.resignFirstResponder()
         
@@ -67,11 +67,9 @@ class GroupListEditController: UIViewController, UITableViewDataSource, UITableV
         alertController.addAction(noAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    // 취소 모달(Alertview) 관련 끝
-    
+
     // 저장 관련 시작
-    @IBAction func save(_ sender: Any) {
-        
+    @IBAction func addSave(_ sender: Any) {
         // custom cell,
         for i in 0..<cellcount{
             let indexPath = IndexPath(row: i, section: 0)
@@ -118,6 +116,8 @@ class GroupListEditController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.groupTable.separatorStyle = UITableViewCellSeparatorStyle.none
         
         // Do any additional setup after loading the view.
     }
