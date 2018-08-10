@@ -34,6 +34,14 @@
                                     <action selector="groupAdd:" destination="ThL-nR-oDl" eventType="touchUpInside" id="TJg-mC-dC3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edu-1M-fuf">
+                                <rect key="frame" x="151" y="632" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="새 모임 등록"/>
+                                <connections>
+                                    <segue destination="fhJ-6b-7UE" kind="presentation" id="pXl-Kq-ibf"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kr0-49-GeG">
                                 <rect key="frame" x="0.0" y="58" width="375" height="566"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,14 +87,6 @@
                                     <outlet property="delegate" destination="ThL-nR-oDl" id="V7l-aW-Cyu"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edu-1M-fuf">
-                                <rect key="frame" x="151" y="632" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="새 모임 등록"/>
-                                <connections>
-                                    <segue destination="fhJ-6b-7UE" kind="presentation" id="p6C-Bk-Uul"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모임 추가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82w-Y1-AII">
                                 <rect key="frame" x="155" y="25" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -261,11 +261,7 @@
                                 <action selector="cancel:" destination="fhJ-6b-7UE" id="iDy-sx-Keq"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="저장" id="7xY-yB-Rq6">
-                            <connections>
-                                <action selector="save:" destination="fhJ-6b-7UE" id="lag-RB-V3n"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="7xY-yB-Rq6"/>
                     </navigationItem>
                     <connections>
                         <outlet property="groupName" destination="O0K-mx-ccD" id="zg0-rx-yBl"/>
@@ -274,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCS-hy-xsv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3737" y="-568"/>
+            <point key="canvasLocation" x="4389.6000000000004" y="-568.06596701649175"/>
         </scene>
     </scenes>
 </document>
