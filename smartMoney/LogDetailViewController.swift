@@ -9,10 +9,19 @@
 import UIKit
 
 class LogDetailViewController: UIViewController {
+    
+    var indexForLogs : Int?
 
+    
     @IBAction func DetailLogCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 

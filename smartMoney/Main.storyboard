@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YY4-VI-Xeb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q3h-NB-GVn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -196,7 +196,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="내역추가"/>
                                 <connections>
-                                    <segue destination="4P0-g7-5BZ" kind="presentation" id="ZTO-fX-Uni"/>
+                                    <segue destination="4P0-g7-5BZ" kind="presentation" identifier="showLogDetail" id="ZTO-fX-Uni"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -307,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNp-bb-g1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5005.6000000000004" y="-310.79460269865069"/>
+            <point key="canvasLocation" x="4969" y="-313"/>
         </scene>
         <!--Add Money Log View Controller-->
         <scene sceneID="SNn-kg-IDb">

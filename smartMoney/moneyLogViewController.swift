@@ -29,6 +29,8 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         return rowNum
    
     }
+    
+    
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moneyLogCell", for: indexPath) as! moneyLogTableViewCell
@@ -46,6 +48,18 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showLogDetail", let detailVC = segue.destination as? LogDetailViewController, let cell = sender as? moneyLogTableViewCell{
+            /*
+            let indexPath = tableView.indexPath(for:cell)!
+            let indexForLogs = logs[(   logs.count-1) - indexPath.row]
+           
+            detailVC.indexForLogs = indexForLogs
+ */
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         rowNum = logs.count
@@ -75,6 +89,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         
     }
     
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,9 +103,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     
 
     
-    //plist 수정 관려!!!!
-    //테이블 로딩 안 되는 거 관련!!
-    
+   
     
     
     

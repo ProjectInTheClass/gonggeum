@@ -13,7 +13,7 @@
         <!--Search Group View Controller-->
         <scene sceneID="9q7-aZ-UoY">
             <objects>
-                <viewController id="ThL-nR-oDl" customClass="searchGroupViewController" customModule="TETETE" sceneMemberID="viewController">
+                <viewController id="ThL-nR-oDl" customClass="searchGroupViewController" customModule="smartMoney" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nIq-0V-e2h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,8 +35,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="확인"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edu-1M-fuf">
+                                <rect key="frame" x="151" y="632" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="새 모임 등록"/>
+                                <connections>
+                                    <segue destination="oqq-gW-ed3" kind="show" id="oVH-L0-MZj">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kr0-49-GeG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="560"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="511"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="cv7-n2-N9B">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
@@ -80,16 +90,6 @@
                                     <outlet property="delegate" destination="ThL-nR-oDl" id="V7l-aW-Cyu"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edu-1M-fuf">
-                                <rect key="frame" x="151" y="632" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="새 모임 등록"/>
-                                <connections>
-                                    <segue destination="oqq-gW-ed3" kind="show" id="oVH-L0-MZj">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -123,7 +123,7 @@
         <!--새 모임 등록-->
         <scene sceneID="tWg-qb-Vft">
             <objects>
-                <viewController id="fhJ-6b-7UE" customClass="GroupListEditController" customModule="TETETE" sceneMemberID="viewController">
+                <viewController id="fhJ-6b-7UE" customClass="GroupListEditController" customModule="smartMoney" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P8B-3x-phg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,11 +254,7 @@
                                 <action selector="cancel:" destination="fhJ-6b-7UE" id="iDy-sx-Keq"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="저장" id="7xY-yB-Rq6">
-                            <connections>
-                                <action selector="save:" destination="fhJ-6b-7UE" id="lag-RB-V3n"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="7xY-yB-Rq6"/>
                     </navigationItem>
                     <connections>
                         <outlet property="groupName" destination="O0K-mx-ccD" id="zg0-rx-yBl"/>
@@ -269,11 +265,13 @@
             </objects>
             <point key="canvasLocation" x="4389.6000000000004" y="-568.06596701649175"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--예산모금-->
         <scene sceneID="HQM-Yp-yKS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bs-Ai-YQI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="예산모금" id="Qi9-Oz-wWo"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mTx-HU-HUi">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
