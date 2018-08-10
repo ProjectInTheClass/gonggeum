@@ -4,7 +4,7 @@
 //
 //  Created by cscoi052 on 2018. 7. 30..
 //  Copyright © 2018년 cscoi052. All rights reserved.
-//
+//  정해진 목록 나타나기 -> 검색어로 필터링된 배열 만들기 -> 테이블 이용 검색된 상태 검색된 배열 출력
 
 import UIKit
 
@@ -16,7 +16,9 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var searchTable: UITableView!
     
     // search bar 필요 변수
-    var filteredData : [String]!
+    var filteredData : [Group] = []
+    
+    var searchActive = false
     
     // group 목록
     var groups = [Group]() {
@@ -30,7 +32,6 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         let data = self.groups.map {
             [
                 "title": $0.title,
-                "members": $0.members
                 ]
         }
         let userDefaults = UserDefaults.standard
@@ -38,6 +39,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         userDefaults.synchronize()
     }
     // group 저장 관련 끝
+    
     
     // group 불러오기 관련 시작
     func loadAll() {
@@ -54,51 +56,83 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     }
     // group 불러오기 관련 끝
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true
+        searchBar.showsCancelButton = true // 취소버튼 보이기
+        print("여기")
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false
+        searchTable.reloadData()
+        print("저기")
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+        searchBar.showsCancelButton = false // 취소버튼 관련
+        searchTable.reloadData()
+        print("요기")
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.groups.count
+        if(searchActive){
+            return filteredData.count
+        }
+        else{
+            return groups.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchTable.dequeueReusableCell(withIdentifier: "searchCell")!
-        let group = self.groups[indexPath.row]
-        cell.textLabel?.text = group.title
-        
+        if(searchActive){
+            cell.textLabel?.text = filteredData[indexPath.row].title
+        }
+        else{
+            let group = self.groups[indexPath.row]
+            cell.textLabel?.text = group.title
+        }
         return cell
     }
-    
-    
-    
+    //
     //    // searchBar 관련 시작
-    //    func searchBar(_ searchbar : UISearchBar, textDidChange searchText : String){
-    //        filteredData = searchText.isEmpty; groups; : groups.filter({(dataString : String)->Bool in
-    //        return dataString.range(of : searchText, options : .caseInsensitive) != nil})
-    //        searchTable.reloadData() // 필터링된 데이터 기준으로 다시 테이블뷰 설정
-    //    }
-    //    // searchBar 관련 끝
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            searchTable.reloadData()
+            return
+        }
+        filteredData = groups.filter({group -> Bool in
+            group.title.lowercased().contains(searchText.lowercased())
+        })
+        searchTable.reloadData()
+    }
     //
-    //    // searchBar 취소 버튼 관련 시작
-    //    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-    //        self.searchBar.showsCancelButton = true // 취소버튼 보이기
-    //    }
-    //    // searchBar 취소 버튼 관련 끝
     //
-    //    // searchBar 취소 버튼 관련 시작
-    //    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    //        self.searchBar.showsCancelButton = false
-    //
-    //    }
+    
+    // searchBar 관련 끝
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 커스텀 셀 설정
-        self.searchTable.dataSource = self
-        self.searchTable.delegate = self
-        self.groupSearchBar.delegate = self
+        searchTable.dataSource = self
+        searchTable.delegate = self
+        groupSearchBar.delegate = self
         self.groupSearchBar.placeholder = "모임 검색"
         
-        // 필터링 배열에 원본데이터배열 등록
-        //        self.filteredData = self.groups
+        //        self.filteredData = [self.groups[0].title]
+        //        print(self.groups[0].title)
+        //
+        //        if groups.count != 0{
+        //            for i in 0..groups.count{
+        //            filteredData.append(self.groups[i].title)
+        //            }
+        //        }
         
         self.loadAll()
         
@@ -119,4 +153,3 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
 }
-
