@@ -43,6 +43,15 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    // 모임 삭제
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            grouplist.remove(at: indexPath.row)
+            groupsTable.reloadData()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = self.groupsTable.indexPathForSelectedRow, let nextVC = segue.destination as? moneyLogViewController{
