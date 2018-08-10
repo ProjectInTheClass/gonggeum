@@ -9,16 +9,6 @@
 import UIKit
 
 
-struct MoneyLog: Codable{
-    var y: Int
-    var m: Int
-    var d: Int
-    var eventName: String
-    var money: Int
-    var memo: String
-    var InOut: Int
-    //evidence info? image? string?
-}
 
 class addMoneyLogViewController: UIViewController {
 
@@ -36,14 +26,8 @@ class addMoneyLogViewController: UIViewController {
     }
     
     @IBAction func saveNewLog(_ sender: Any) {
-        let filePath = NSHomeDirectory() + "/Documents/moneyLog.json"
         
-        print (filePath)
-        let fileUrl = URL(fileURLWithPath: filePath)
-        let encoder = JSONEncoder()
-        let decoder = JSONDecoder()
-        
-        
+        //dividing date into y, m, d
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy"
         let year: Int = Int(dateFormatter.string(from: self.date.date))!
@@ -62,33 +46,16 @@ class addMoneyLogViewController: UIViewController {
         }
        
         
-       
-        
         if let en = eventName.text, let hm = howMuch.text, let intHM = Int(hm), let mm = memo.text{
             let log = MoneyLog(y: year, m: month, d: day, eventName: en, money: intHM, memo: mm, InOut: IsIn)
-            
-            
-            if let data = try? Data.init(contentsOf: fileUrl),
-                var arrayInFile = try? decoder.decode([MoneyLog].self, from: data){
-                arrayInFile.append(log)
-                print("파일에서 읽기 : \(arrayInFile)")
-                
-                if let data = try? encoder.encode(arrayInFile) {
-                    try! data.write(to: fileUrl)
-                }
-                
-            }
-            
-            //if let data = try? encoder.encode([log]) {
-            //    try! data.write(to: fileUrl)
-            //}
+
+            addLog(log)
+            saveLog()
+        
         }
-   
         
-        
-        
-        
-        
+        self.dismiss(animated: true, completion: nil)
+
     }
     
     

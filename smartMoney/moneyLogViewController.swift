@@ -10,19 +10,22 @@ import UIKit
 
 
 class moneyLogViewController: UIViewController, UITableViewDataSource {
- 
+    
+    var rowNum : Int = logs.count
     
     //앞선 단계에서 보내온 데이터를 받기 위함.
     var data : String?
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-        //return group1.logList.count
-    }
     
+        return rowNum
+   
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moneyLogCell", for: indexPath) as! moneyLogTableViewCell
+        
         
         let when : String = "1"
         let why : String = "hi"
@@ -36,11 +39,10 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       print("view appear error?")
+        rowNum = logs.count
         
         if let accountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist"), let accountInfo = NSDictionary(contentsOfFile: accountInfoPath)
             {
-                print(accountInfoPath)
                 print(accountInfo)
 //
 //                if let bankName : String = accountInfo["bankName"] as? String{

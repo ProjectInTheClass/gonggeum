@@ -15,9 +15,11 @@ class EditAccountViewController: UIViewController {
     @IBOutlet weak var ownerName: UITextField!
     
     @IBAction func modalCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func modalSave(_ sender: Any) {
+        ////////////////
         if let accountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist")
         {
             print(accountInfoPath)

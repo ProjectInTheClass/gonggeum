@@ -27,6 +27,8 @@
 		9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413E12110473B00BF8022 /* StoryboardB.storyboard */; };
 		9DE413E421104DA600BF8022 /* addMoneyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */; };
 		9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE413E52110505B00BF8022 /* moneyLogViewController.swift */; };
+		AD0AE959211D5C2C003A7193 /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0AE958211D5C2C003A7193 /* LogDetailViewController.swift */; };
+		AD0AE95B211D68E5003A7193 /* MoneyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0AE95A211D68E5003A7193 /* MoneyLog.swift */; };
 		ADA4EF6F211ACB74008C9835 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4EF6E211ACB74008C9835 /* Group.swift */; };
 		ADA4EF71211ACB8A008C9835 /* GroupListEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4EF70211ACB8A008C9835 /* GroupListEditController.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,8 @@
 		9DE413E12110473B00BF8022 /* StoryboardB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
 		9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMoneyLogViewController.swift; sourceTree = "<group>"; };
 		9DE413E52110505B00BF8022 /* moneyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLogViewController.swift; sourceTree = "<group>"; };
+		AD0AE958211D5C2C003A7193 /* LogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
+		AD0AE95A211D68E5003A7193 /* MoneyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyLog.swift; sourceTree = "<group>"; };
 		ADA4EF6E211ACB74008C9835 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		ADA4EF70211ACB8A008C9835 /* GroupListEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListEditController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +152,8 @@
 				9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */,
 				9DE413E12110473B00BF8022 /* StoryboardB.storyboard */,
 				9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */,
+				AD0AE958211D5C2C003A7193 /* LogDetailViewController.swift */,
+				AD0AE95A211D68E5003A7193 /* MoneyLog.swift */,
 			);
 			path = smartMoney;
 			sourceTree = "<group>";
@@ -310,10 +316,12 @@
 				9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */,
 				9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */,
 				9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */,
+				AD0AE95B211D68E5003A7193 /* MoneyLog.swift in Sources */,
 				9D3F9EDE210F0ECA00F10781 /* searchGroupViewController.swift in Sources */,
 				9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */,
 				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
 				ADA4EF6F211ACB74008C9835 /* Group.swift in Sources */,
+				AD0AE959211D5C2C003A7193 /* LogDetailViewController.swift in Sources */,
 				9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */,
 				9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */,
 				ADA4EF71211ACB8A008C9835 /* GroupListEditController.swift in Sources */,
