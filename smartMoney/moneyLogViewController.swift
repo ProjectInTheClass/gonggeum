@@ -18,7 +18,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var balanceLabel: UILabel!
     
     
-    var rowNum : Int = logs.count
+    var rowNum : Int = currentGroupLogs.count
     
     //앞선 단계에서 보내온 데이터를 받기 위함.
     var data : String?
@@ -35,7 +35,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moneyLogCell", for: indexPath) as! moneyLogTableViewCell
         
-        let logForCell = logs[(logs.count-1) - indexPath.row]
+        let logForCell = currentGroupLogs[(currentGroupLogs.count-1) - indexPath.row]
         let when : String = "\(logForCell.y)" + "." +
                             "\(logForCell.m)" + "." +
                             "\(logForCell.d)"
@@ -48,39 +48,37 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showLogDetail", let detailVC = segue.destination as? LogDetailViewController, let cell = sender as? moneyLogTableViewCell{
-            /*
+            
             let indexPath = tableView.indexPath(for:cell)!
-            let indexForLogs = logs[(   logs.count-1) - indexPath.row]
+            let indexForLogs = currentGroupLogs[(CurrentGroupLogs.count-1) - indexPath.row]
            
             detailVC.indexForLogs = indexForLogs
- */
+ 
         }
     }
-    
+    */
     
     override func viewWillAppear(_ animated: Bool) {
-        rowNum = logs.count
+//        rowNum = currentGroupLogs.count
         
-        if let accountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist"), let accountInfo = NSDictionary(contentsOfFile: accountInfoPath)
-            {
-                print(accountInfo)
+        if let ACinfo = accountInfo{
 
-                if let bankName : String = accountInfo["bankName"] as? String{
+                if let bankName : String = ACinfo["bankName"] as? String{
                     bankNameLabel.text = bankName
                 }
 
-                if let accountNum : String = accountInfo["accountNum"] as? String{
+                if let accountNum : String = ACinfo["accountNum"] as? String{
                     accountNumLabel.text = accountNum
                 }
 
-                if let owner : String = accountInfo["owner"] as? String{
+                if let owner : String = ACinfo["owner"] as? String{
                     ownerLabel.text = owner
                 }
                 
-                if let balance : Int = accountInfo["balance"] as? Int{
+                if let balance : Int = ACinfo["balance"] as? Int{
                     balanceLabel.text = "\(balance)"
                 }
  

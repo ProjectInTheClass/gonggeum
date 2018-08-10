@@ -10,14 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--StoryboardA-->
-        <scene sceneID="kyY-EH-1YM">
-            <objects>
-                <viewControllerPlaceholder storyboardName="StoryboardA" id="jTt-iI-OL7" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4UL-GR-DAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4655" y="-523"/>
-        </scene>
         <!--Funding List Table View Controller-->
         <scene sceneID="cFv-2T-kQr">
             <objects>
@@ -61,11 +53,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="oV0-qK-JQr">
-                        <barButtonItem key="leftBarButtonItem" title="모임변경" id="8ae-C9-URa">
-                            <connections>
-                                <segue destination="jTt-iI-OL7" kind="presentation" id="zpP-pt-TaM"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="펀딩 추가" id="0Pq-ws-44e">
                             <connections>
                                 <segue destination="Hlg-3B-fKY" kind="presentation" id="62J-MG-9GR"/>

@@ -30,8 +30,15 @@ struct MoneyLog: Codable{
 
 //var logs : [MoneyLog] = []
 var GroupInfos : [GroupInfo] = []
-var currentGroup : String?
-var currentGroupLogs :[MoneyLog] = []
+
+
+//var currentGroup : String?
+//var currentGroupLogs :[MoneyLog] = []
+
+
+var currentGroup : String = "test group"
+var currentGroupLogs :[MoneyLog] = [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]
+
 //var balanceInfo = 0
 
 //json
@@ -47,6 +54,15 @@ func loadLog(){
     // 파일에서 읽어서 logs에 대입
     let decoder = JSONDecoder()
     
+    print("======", LogJsonUrl)
+    print("======", LogJsonPath)
+    
+    print("======", AccountInfoPath)
+    print("======", accountInfo)
+    
+    print(currentGroup)
+    print(currentGroupLogs)
+    
     if let data = try? Data.init(contentsOf: LogJsonUrl), let infosFromFile = try? decoder.decode([GroupInfo].self, from: data){
         print (infosFromFile[1])
         print("개수 : ", infosFromFile.count)
@@ -55,7 +71,9 @@ func loadLog(){
         
         //initialize current Group to first group in JSON file
         currentGroup = infosFromFile[0].name
+        print("current Group : ", currentGroup)
         currentGroupLogs = infosFromFile[0].logs
+        print("current Group Logs : ", currentGroupLogs)
     }
     
     // plist
