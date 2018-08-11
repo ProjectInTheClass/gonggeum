@@ -11,8 +11,8 @@ import UIKit
 let groupDefaultsKey = "groupDefaultsKey"
 
 class searchGroupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-    
-    @IBOutlet weak var groupSearchBar: UISearchBar!
+
+    @IBOutlet weak var groupSearch: UISearchBar!
     @IBOutlet weak var searchTable: UITableView!
     
     @IBAction func groupAddCancel(_ sender: Any) {
@@ -20,16 +20,20 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     }
     @IBAction func groupAdd(_ sender: Any) {
         if let indexPath = searchTable.indexPathForSelectedRow {
-            let selectedGroup = groups[indexPath.row]
+            let selectedGroup = self.group[indexPath.row]
             grouplist.append(selectedGroup)
             self.dismiss(animated: true, completion: nil)
         }
         else {
+            let checkAction = UIAlertAction(title: "확인", style: .default) { _ in
+                self.groupSearch.becomeFirstResponder()
+            }
             let alertController = UIAlertController(
                 title: "주의!",
                 message: "선택된 모임이 없습니다.",
                 preferredStyle: .alert
             )
+            alertController.addAction(checkAction)
             self.present(alertController, animated: true, completion: nil)
         }
         
@@ -39,14 +43,33 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     var filteredData : [Group] = []
     
     var searchActive = false
+
+    var group = [Group](){
+        didSet{
+            self.saveAll()
+        }
+    }
     
     // group 저장 관련 시작
     func saveAll() {
-        let data = groups.map {
+        var data = self.group.map {
             [
                 "title": $0.title,
                 ]
         }
+        if self.group.count == 0{
+        data.append(["title": "맛집"])
+        data.append(["title": "영화감상"])
+        data.append(["title": "독서모임"])
+        data.append(["title": "여행"])
+        data.append(["title": "경영전략"])
+        data.append(["title": "블록체인"])
+        data.append(["title": "볼링"])
+        data.append(["title": "산악"])
+        data.append(["title": "밴드"])
+        data.append(["title": "노래"])
+        data.append(["title": "합창"])
+        data.append(["title": "경제"])}
         let userDefaults = UserDefaults.standard
         userDefaults.set(data, forKey : groupDefaultsKey)
         userDefaults.synchronize()
@@ -60,7 +83,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         guard let data = userDefaults.object(forKey: groupDefaultsKey) as? [[String: AnyObject]] else {
             return
         }
-        groups = data.flatMap {
+        self.group = data.flatMap {
             guard let title = $0["title"] as? String else {
                 return nil
             }
@@ -69,8 +92,17 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     }
     // group 불러오기 관련 끝
     
+    // 모임 삭제
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            self.group.remove(at: indexPath.row)
+            searchTable.reloadData()
+        }
+    }
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchActive = true
+        //searchActive = true
         searchBar.showsCancelButton = true // 취소버튼 보이기
     }
     
@@ -86,7 +118,11 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false
+        searchActive = true
+        let keyword = groupSearch.text
+        self.searchDisplayController?.isActive = false
+        groupSearch.text = keyword
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,7 +130,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
             return filteredData.count
         }
         else{
-            return groups.count
+            return self.group.count
         }
     }
     
@@ -104,7 +140,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
             cell.textLabel?.text = filteredData[indexPath.row].title
         }
         else{
-            let group = groups[indexPath.row]
+            let group = self.group[indexPath.row]
             cell.textLabel?.text = group.title
         }
         return cell
@@ -112,11 +148,14 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
 
     // searchBar 관련 시작
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         guard !searchText.isEmpty else {
+            searchActive = false
             searchTable.reloadData()
             return
         }
-        filteredData = groups.filter({group -> Bool in
+        searchActive = true
+        filteredData = self.group.filter({group -> Bool in
             group.title.lowercased().contains(searchText.lowercased())
         })
         searchTable.reloadData()
@@ -129,9 +168,9 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         // 커스텀 셀 설정
         searchTable.dataSource = self
         searchTable.delegate = self
-        groupSearchBar.delegate = self
-        self.groupSearchBar.placeholder = "모임 검색"
-        
+        groupSearch.delegate = self
+        self.groupSearch.placeholder = "모임 검색"
+
         self.loadAll()
         
     }
@@ -144,7 +183,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let groupEditorViewController = segue.destination as? GroupListEditController {
             groupEditorViewController.addInfo = { group in
-                groups.append(group)
+                self.group.append(group)
                 self.searchTable.reloadData()
             }
         }

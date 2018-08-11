@@ -6,8 +6,6 @@
 //  Copyright © 2018년 cscoi052. All rights reserved.
 //
 
-// 구성원 미구현
-
 import UIKit
 
 class GroupListEditController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -51,10 +49,10 @@ class GroupListEditController: UIViewController, UITableViewDataSource, UITableV
             return
         }
         
-        let yesAction = UIAlertAction(title: "YES", style: .destructive) { _ in
+        let yesAction = UIAlertAction(title: "예", style: .destructive) { _ in
             self.dismiss(animated: true, completion: nil)
         }
-        let noAction = UIAlertAction(title: "NO", style: .default) { _ in
+        let noAction = UIAlertAction(title: "아니요", style: .default) { _ in
             self.groupName.becomeFirstResponder()
         }
         
@@ -82,35 +80,41 @@ class GroupListEditController: UIViewController, UITableViewDataSource, UITableV
         
         if self.groupName.text?.isEmpty == true
         {
-            self.dismiss(animated: true, completion: nil)
-            return
+            let checkAction = UIAlertAction(title: "확인", style: .default) { _ in
+                self.groupName.becomeFirstResponder()
+            }
+            let alertController = UIAlertController(
+                title: "주의!",
+                message: "저장된 데이터가 없습니다.",
+                preferredStyle: .alert
+            )
+            alertController.addAction(checkAction)
+            self.present(alertController, animated: true, completion: nil)
         }
         
-        // 저장 관련 주의! 미구현
-        //        let yesActionsave = UIAlertAction(title: "NO", style: .destructive) { _ in
-        //            self.dismiss(animated: true, completion: nil)
-        //        }
-        //        let noActionsave = UIAlertAction(title: "YES", style: .default) { _ in
-        //            self.groupName.becomeFirstResponder()
-        //        }
-        //
-        //        let alertController = UIAlertController(
-        //            title: "확인!",
-        //            message: "현재 내용을 저장하시겠습니까?",
-        //            preferredStyle: .alert
-        //        )
-        //
-        //        alertController.addAction(yesAction)
-        //        alertController.addAction(noAction)
-        //        self.present(alertController, animated: true, completion: nil)
-        
-        let newGroup = Group(title: groupName.text!)
-        newGroup.members = memberData
-        self.addInfo?(newGroup)
-        print(newGroup.title)
-        print(newGroup.members)
-        
-        self.dismiss(animated: true, completion: nil)
+        //저장 관련 주의!
+        let yesActionsave = UIAlertAction(title: "예", style: .destructive) { _ in
+            let newGroup = Group(title: self.groupName.text!)
+            newGroup.members = self.memberData
+            self.addInfo?(newGroup)
+            print(newGroup.title)
+            print(newGroup.members)
+            self.dismiss(animated: true, completion: nil)
+        }
+        let noActionsave = UIAlertAction(title: "아니요", style: .default) { _ in
+            self.groupName.becomeFirstResponder()
+        }
+
+        let alertController = UIAlertController(
+            title: "확인!",
+            message: "현재 내용을 저장하시겠습니까?",
+            preferredStyle: .alert
+        )
+
+        alertController.addAction(yesActionsave)
+        alertController.addAction(noActionsave)
+        self.present(alertController, animated: true, completion: nil)
+
     }
     // 저장 관련 끝
 
