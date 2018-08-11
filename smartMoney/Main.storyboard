@@ -56,7 +56,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="디자인소스" translatesAutoresizingMaskIntoConstraints="NO" id="SlS-gz-MWX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="배경사진" translatesAutoresizingMaskIntoConstraints="NO" id="SlS-gz-MWX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="잔고" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc9-BP-gAv">
@@ -74,21 +74,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVQ-hs-MRt">
-                                <rect key="frame" x="83" y="67" width="52" height="30"/>
-                                <state key="normal" title="수정"/>
-                                <connections>
-                                    <segue destination="2lK-XH-cFk" kind="presentation" id="jux-rp-Ss4"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="은행이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL0-It-e8w">
-                                <rect key="frame" x="16" y="100" width="59" height="21"/>
+                                <rect key="frame" x="16" y="102" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계좌번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpm-VQ-pIh">
-                                <rect key="frame" x="16" y="158" width="171" height="21"/>
+                                <rect key="frame" x="16" y="160" width="171" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="171" id="GdK-Ap-hDT"/>
                                 </constraints>
@@ -97,7 +90,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예금주" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-0a-cBK">
-                                <rect key="frame" x="16" y="129" width="44.5" height="21"/>
+                                <rect key="frame" x="16" y="131" width="44.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,8 +102,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공금계좌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-tc-1L5">
-                                <rect key="frame" x="16" y="71" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="71" width="66" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -188,7 +181,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEB-Zu-Lrt">
-                                <rect key="frame" x="320" y="192" width="55" height="45"/>
+                                <rect key="frame" x="80" y="202" width="55" height="35"/>
                                 <connections>
                                     <segue destination="4P0-g7-5BZ" kind="presentation" identifier="showLogDetail" id="ZTO-fX-Uni"/>
                                 </connections>
@@ -197,10 +190,24 @@
                                 <rect key="frame" x="16" y="24" width="36" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="e91-lm-YBf">
-                                <rect key="frame" x="334" y="209" width="28" height="28"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus Icon" translatesAutoresizingMaskIntoConstraints="NO" id="e91-lm-YBf">
+                                <rect key="frame" x="90" y="212" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사용내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnP-rz-XnG">
+                                <rect key="frame" x="13" y="214" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVQ-hs-MRt">
+                                <rect key="frame" x="90" y="67" width="45" height="30"/>
+                                <state key="normal" title="수정"/>
+                                <connections>
+                                    <segue destination="2lK-XH-cFk" kind="presentation" id="jux-rp-Ss4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63372021909999998" green="0.63550293449999995" blue="0.96294170619999997" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -273,7 +280,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="디자인소스" translatesAutoresizingMaskIntoConstraints="NO" id="E3w-qs-7Kz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="배경사진" translatesAutoresizingMaskIntoConstraints="NO" id="E3w-qs-7Kz">
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mst-Tx-YQ0">
@@ -378,7 +385,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="디자인소스" translatesAutoresizingMaskIntoConstraints="NO" id="ew8-Tf-qNh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="배경사진" translatesAutoresizingMaskIntoConstraints="NO" id="ew8-Tf-qNh">
                                 <rect key="frame" x="0.0" y="0.0" width="376" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw3-bb-Ow6">
@@ -463,7 +470,7 @@
                                     <segment title="출금"/>
                                 </segments>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="floppy-disk-doodle" translatesAutoresizingMaskIntoConstraints="NO" id="WCb-F1-FSA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="save Icon" translatesAutoresizingMaskIntoConstraints="NO" id="WCb-F1-FSA">
                                 <rect key="frame" x="325" y="22" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -484,7 +491,7 @@
                                     <action selector="cancelAdding:" destination="4P0-g7-5BZ" eventType="touchUpInside" id="o0M-7T-lZH"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cancel-music" translatesAutoresizingMaskIntoConstraints="NO" id="MEB-pk-yx4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cancel Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MEB-pk-yx4">
                                 <rect key="frame" x="16" y="25" width="23" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="23" id="oMD-Ma-HjN"/>
@@ -574,7 +581,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="디자인소스" translatesAutoresizingMaskIntoConstraints="NO" id="u73-dY-RVg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="배경사진" translatesAutoresizingMaskIntoConstraints="NO" id="u73-dY-RVg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="896"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJl-ol-8Ay">
@@ -847,13 +854,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cancel-music" width="512" height="512"/>
+        <image name="cancel Icon" width="512" height="512"/>
         <image name="detail_team_info" width="375" height="667"/>
-        <image name="floppy-disk-doodle" width="512" height="512"/>
         <image name="handinList" width="375" height="667"/>
         <image name="home" width="512" height="512"/>
         <image name="main" width="375" height="667"/>
-        <image name="plus" width="512" height="512"/>
-        <image name="디자인소스" width="1196" height="896"/>
+        <image name="plus Icon" width="512" height="512"/>
+        <image name="save Icon" width="512" height="512"/>
+        <image name="배경사진" width="1196" height="896"/>
     </resources>
 </document>
