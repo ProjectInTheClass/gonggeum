@@ -48,6 +48,7 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
         if let indexPath = self.groupsTable.indexPathForSelectedRow{
             let selectedData = grouplist[indexPath.row].title
             currentGroup = selectedData
+            print("current Group changed to : ", currentGroup)
         }
  
     }

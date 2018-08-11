@@ -54,25 +54,19 @@ func loadLog(){
     
     if let infosFromFile = NSDictionary(contentsOfFile: LogJsonPath) as? [String:[MoneyLog]]{
         GroupInfos = infosFromFile
-        
-        if infosFromFile.count > 0 {
-            GroupInfos = infosFromFile
-            currentGroup = GroupInfos.Keys[0]
-        }
-            
-        else {
-            GroupInfos = ["swift study" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)], "swift study2" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]]
-            currentGroup = "swift study"
-            currentGroupLogs = GroupInfos["swift study"]!
-            
-            
-        }
-        
-        //initialize current Group to first group in JSON file
-        //currentGroup = infosFromFile[0].name
-        print("current Group : ", currentGroup)
-        print("current Group Logs : ", currentGroupLogs)
     }
+    
+    else {
+        GroupInfos = ["swift study" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)], "swift study2" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]]
+        currentGroup = "swift study"
+        currentGroupLogs = GroupInfos["swift study"]!
+        
+    }
+    
+    //initialize current Group to first group in JSON file
+    //currentGroup = infosFromFile[0].name
+    print("current Group : ", currentGroup)
+    print("current Group Logs : ", currentGroupLogs)
     /*
     if let data = try? Data.init(contentsOf: LogJsonUrl), let infosFromFile = try? decoder.decode(GroupInfos.self, from: data){
         print("개수 : ", infosFromFile.count)
@@ -101,10 +95,7 @@ func loadLog(){
 
 func saveLog(){
     // logs를 파일로 저장
-    
-    
-    
-    /*
+
     let encoder = JSONEncoder()
     
     if let data = try? encoder.encode(GroupInfos) {
@@ -112,8 +103,6 @@ func saveLog(){
             try! data.write(to: LogJsonUrl)
             print("saving logs[] to JSON file finished!")
         }
-    
-    */
     
     
     // plist 저장
@@ -127,8 +116,9 @@ func saveLog(){
 
 
 func addLog(_ log: MoneyLog){
-    currentGroupLogs.append(log)
-    
+    if let cg = currentGroup, var l = GroupInfos[cg]{
+        l.append(log)
+    }
     //update balance in plist
     if let info = accountInfo{
         var balanceInfo = info.object(forKey: "balance") as! Int

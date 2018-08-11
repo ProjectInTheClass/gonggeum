@@ -12,13 +12,13 @@ import UIKit
 class moneyLogViewController: UIViewController, UITableViewDataSource {
     //공금계좌 정보 라벨
     
+    @IBOutlet weak var GroupNameLabel: UILabel!
     @IBOutlet weak var bankNameLabel: UILabel!
     @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var accountNumLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     
     
-    var rowNum : Int = currentGroupLogs.count
     
     //앞선 단계에서 보내온 데이터를 받기 위함.
     var data : String?
@@ -26,7 +26,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return rowNum
+        return currentGroupLogs.count
    
     }
     
@@ -46,24 +46,14 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         cell.why.text = why
         cell.balance.text = "\(InOutMoney)"
         
+        //make background clear
+        cell.layer.backgroundColor = UIColor.clear.cgColor
+        
         return cell
     }
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showLogDetail", let detailVC = segue.destination as? LogDetailViewController, let cell = sender as? moneyLogTableViewCell{
-            
-            let indexPath = tableView.indexPath(for:cell)!
-            let indexForLogs = currentGroupLogs[(CurrentGroupLogs.count-1) - indexPath.row]
-           
-            detailVC.indexForLogs = indexForLogs
- 
-        }
-    }
-    */
-    
+
     override func viewWillAppear(_ animated: Bool) {
-//        rowNum = currentGroupLogs.count
-        
+        GroupNameLabel.text = currentGroup
         if let ACinfo = accountInfo{
 
                 if let bankName : String = ACinfo["bankName"] as? String{
