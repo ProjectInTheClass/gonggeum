@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C987058212172B50006FBFC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564991211C1E4D00DEECD4 /* Group.swift */; };
 		0C987059212172D40006FBFC /* searchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564993211C1E8C00DEECD4 /* searchGroupViewController.swift */; };
+
 		0C98705C212185BB0006FBFC /* moneyLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98705B212185BB0006FBFC /* moneyLogTableViewCell.swift */; };
 		0C98705E212185DC0006FBFC /* myGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98705D212185DC0006FBFC /* myGroupViewController.swift */; };
 		0C987060212186720006FBFC /* UIViewControllerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98705F212186720006FBFC /* UIViewControllerModal.swift */; };
@@ -19,6 +20,14 @@
 		0CF90B2C211D7B4800AF860B /* fundingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B2A211D7B4700AF860B /* fundingListTableViewController.swift */; };
 		0CF90B2D211D7B4800AF860B /* fundingInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B2B211D7B4700AF860B /* fundingInfoController.swift */; };
 		0CF90B31211D7BD400AF860B /* newFundingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B30211D7BD400AF860B /* newFundingController.swift */; };
+
+		0CF90B29211D7B3600AF860B /* arrayFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B28211D7B3600AF860B /* arrayFile.swift */; };
+		6C44022621216DB80077BAFA /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C44022521216DA30077BAFA /* DXKPMB-KSCpc-EUC-H.ttf */; };
+		6C440227212179D40077BAFA /* fundingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C44021F212159550077BAFA /* fundingListTableViewController.swift */; };
+		6C440228212179D90077BAFA /* fundingInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C44021D212159070077BAFA /* fundingInfoController.swift */; };
+		6C440229212179E90077BAFA /* arrayFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C440223212159710077BAFA /* arrayFile.swift */; };
+		6C44022A212179ED0077BAFA /* newFundingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C440221212159630077BAFA /* newFundingController.swift */; };
+
 		6C564998211C1E8C00DEECD4 /* groupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */; };
 		6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */; };
 		9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */; };
@@ -36,8 +45,14 @@
 		9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413E12110473B00BF8022 /* StoryboardB.storyboard */; };
 		9DE413E421104DA600BF8022 /* addMoneyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */; };
 		9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE413E52110505B00BF8022 /* moneyLogViewController.swift */; };
+
 		AD08FF622121601700FB0891 /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */; };
 		AD0AE95B211D68E5003A7193 /* MoneyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0AE95A211D68E5003A7193 /* MoneyLog.swift */; };
+
+		AD0AE959211D5C2C003A7193 /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0AE958211D5C2C003A7193 /* LogDetailViewController.swift */; };
+		AD0AE95B211D68E5003A7193 /* MoneyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0AE95A211D68E5003A7193 /* MoneyLog.swift */; };
+		ADA4EF6F211ACB74008C9835 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4EF6E211ACB74008C9835 /* Group.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
 		0C98705B212185BB0006FBFC /* moneyLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moneyLogTableViewCell.swift; sourceTree = "<group>"; };
 		0C98705D212185DC0006FBFC /* myGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myGroupViewController.swift; sourceTree = "<group>"; };
 		0C98705F212186720006FBFC /* UIViewControllerModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerModal.swift; sourceTree = "<group>"; };
@@ -68,6 +84,14 @@
 		0CF90B2A211D7B4700AF860B /* fundingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fundingListTableViewController.swift; sourceTree = "<group>"; };
 		0CF90B2B211D7B4700AF860B /* fundingInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fundingInfoController.swift; sourceTree = "<group>"; };
 		0CF90B30211D7BD400AF860B /* newFundingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newFundingController.swift; sourceTree = "<group>"; };
+
+		0CF90B28211D7B3600AF860B /* arrayFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arrayFile.swift; sourceTree = "<group>"; };
+		6C44021D212159070077BAFA /* fundingInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = fundingInfoController.swift; path = "../../마스터/smartMoney/fundingInfoController.swift"; sourceTree = "<group>"; };
+		6C44021F212159550077BAFA /* fundingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = fundingListTableViewController.swift; path = "../../마스터/smartMoney/fundingListTableViewController.swift"; sourceTree = "<group>"; };
+		6C440221212159630077BAFA /* newFundingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = newFundingController.swift; path = "../../마스터/smartMoney/newFundingController.swift"; sourceTree = "<group>"; };
+		6C440223212159710077BAFA /* arrayFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = arrayFile.swift; path = "../../마스터/smartMoney/arrayFile.swift"; sourceTree = "<group>"; };
+		6C44022521216DA30077BAFA /* DXKPMB-KSCpc-EUC-H.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DXKPMB-KSCpc-EUC-H.ttf"; path = "../../../Downloads/DXKPMB-KSCpc-EUC-H.ttf"; sourceTree = "<group>"; };
+
 		6C564991211C1E4D00DEECD4 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		6C564993211C1E8C00DEECD4 /* searchGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchGroupViewController.swift; sourceTree = "<group>"; };
 		6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,8 +117,14 @@
 		9DE413E12110473B00BF8022 /* StoryboardB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
 		9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMoneyLogViewController.swift; sourceTree = "<group>"; };
 		9DE413E52110505B00BF8022 /* moneyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLogViewController.swift; sourceTree = "<group>"; };
+
 		AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DXKPMB-KSCpc-EUC-H.ttf"; sourceTree = "<group>"; };
 		AD0AE95A211D68E5003A7193 /* MoneyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyLog.swift; sourceTree = "<group>"; };
+
+		AD0AE958211D5C2C003A7193 /* LogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
+		AD0AE95A211D68E5003A7193 /* MoneyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyLog.swift; sourceTree = "<group>"; };
+		ADA4EF6E211ACB74008C9835 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +152,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C470722212180100086940B /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				0CF90B28211D7B3600AF860B /* arrayFile.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		9D922EE820F47F9500BFEFDD = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +167,7 @@
 				9D922F0820F47F9500BFEFDD /* smartMoneyTests */,
 				9D922F1320F47F9500BFEFDD /* smartMoneyUITests */,
 				9D922EF220F47F9500BFEFDD /* Products */,
+				6C470722212180100086940B /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +184,7 @@
 		9D922EF320F47F9500BFEFDD /* smartMoney */ = {
 			isa = PBXGroup;
 			children = (
+
 				0C987065212186DF0006FBFC /* arrayFile.swift */,
 				0C987063212186A50006FBFC /* LogDetailViewController.swift */,
 				0C987061212186920006FBFC /* ViewController.swift */,
@@ -153,6 +193,7 @@
 				0C98705B212185BB0006FBFC /* moneyLogTableViewCell.swift */,
 				0CF90B30211D7BD400AF860B /* newFundingController.swift */,
 				AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */,
+
 				9D922F2820F480EE00BFEFDD /* UIViewControllerKeyboard.swift */,
 				9D922EF420F47F9500BFEFDD /* AppDelegate.swift */,
 				9D2A428E210712AB002B1DA9 /* Main.storyboard */,
@@ -160,8 +201,12 @@
 				9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */,
 				9DE413E52110505B00BF8022 /* moneyLogViewController.swift */,
 				9D1F001F211198A0007E4B59 /* PracticeViewController.swift */,
+
 				0CF90B2B211D7B4700AF860B /* fundingInfoController.swift */,
 				0CF90B2A211D7B4700AF860B /* fundingListTableViewController.swift */,
+
+				ADA4EF6E211ACB74008C9835 /* Group.swift */,
+
 				9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */,
 				AD0AE95A211D68E5003A7193 /* MoneyLog.swift */,
 				9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */,
@@ -172,9 +217,13 @@
 				6C564991211C1E4D00DEECD4 /* Group.swift */,
 				6C564993211C1E8C00DEECD4 /* searchGroupViewController.swift */,
 				6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */,
-				0C9FA25421215D28009A58F2 /* memberCellTableViewCell.swift */,
 				6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */,
 				9DE413E12110473B00BF8022 /* StoryboardB.storyboard */,
+				6C44021D212159070077BAFA /* fundingInfoController.swift */,
+				6C44021F212159550077BAFA /* fundingListTableViewController.swift */,
+				6C440221212159630077BAFA /* newFundingController.swift */,
+				6C440223212159710077BAFA /* arrayFile.swift */,
+				6C44022521216DA30077BAFA /* DXKPMB-KSCpc-EUC-H.ttf */,
 			);
 			path = smartMoney;
 			sourceTree = "<group>";
@@ -309,7 +358,7 @@
 				9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */,
 				9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */,
 				9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */,
-				AD08FF622121601700FB0891 /* DXKPMB-KSCpc-EUC-H.ttf in Resources */,
+				6C44022621216DB80077BAFA /* DXKPMB-KSCpc-EUC-H.ttf in Resources */,
 				9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,9 +384,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				0C987058212172B50006FBFC /* Group.swift in Sources */,
 				0C987064212186A50006FBFC /* LogDetailViewController.swift in Sources */,
 				0CF90B31211D7BD400AF860B /* newFundingController.swift in Sources */,
+
+				6C44022A212179ED0077BAFA /* newFundingController.swift in Sources */,
+				0C987058212172B50006FBFC /* Group.swift in Sources */,
+
 				9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */,
 				0C98705C212185BB0006FBFC /* moneyLogTableViewCell.swift in Sources */,
 				0C987062212186930006FBFC /* ViewController.swift in Sources */,
@@ -346,17 +400,36 @@
 				0C987060212186720006FBFC /* UIViewControllerModal.swift in Sources */,
 				6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */,
 				9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */,
+
 				0C98705E212185DC0006FBFC /* myGroupViewController.swift in Sources */,
 				AD0AE95B211D68E5003A7193 /* MoneyLog.swift in Sources */,
 				0CF90B2D211D7B4800AF860B /* fundingInfoController.swift in Sources */,
 				0C987059212172D40006FBFC /* searchGroupViewController.swift in Sources */,
 				0CF90B2C211D7B4800AF860B /* fundingListTableViewController.swift in Sources */,
+
+				6C440228212179D90077BAFA /* fundingInfoController.swift in Sources */,
+				AD0AE95B211D68E5003A7193 /* MoneyLog.swift in Sources */,
+				6C440229212179E90077BAFA /* arrayFile.swift in Sources */,
+				9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */,
+				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
+				0CF90B29211D7B3600AF860B /* arrayFile.swift in Sources */,
+				0C987059212172D40006FBFC /* searchGroupViewController.swift in Sources */,
+				AD0AE959211D5C2C003A7193 /* LogDetailViewController.swift in Sources */,
+				9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */,
+				9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */,
+				9D922F2B20F480F700BFEFDD /* UIViewControllerModal.swift in Sources */,
+				6C440227212179D40077BAFA /* fundingListTableViewController.swift in Sources */,
+				9D922EF720F47F9500BFEFDD /* ViewController.swift in Sources */,
+				ADA4EF6F211ACB74008C9835 /* Group.swift in Sources */,
+				AD0AE959211D5C2C003A7193 /* LogDetailViewController.swift in Sources */,
+				9D3F9EDC210F03DC00F10781 /* myGroupViewController.swift in Sources */,
+				9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */,
+
 				9D922EF520F47F9500BFEFDD /* AppDelegate.swift in Sources */,
 				0C987066212186DF0006FBFC /* arrayFile.swift in Sources */,
 				9D1F0020211198A0007E4B59 /* PracticeViewController.swift in Sources */,
 				9D922F2920F480EE00BFEFDD /* UIViewControllerKeyboard.swift in Sources */,
 				9DE413E421104DA600BF8022 /* addMoneyLogViewController.swift in Sources */,
-				0C9FA25521215D28009A58F2 /* memberCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
