@@ -18,6 +18,8 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var accountNumLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     
+    @IBOutlet weak var LogTable: UITableView!
+    
     
     
     //앞선 단계에서 보내온 데이터를 받기 위함.
@@ -41,12 +43,24 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
                             "\(logForCell.d)"
         let why : String = logForCell.eventName
         let InOutMoney : Int = logForCell.money * logForCell.InOut
+        let balanceT : Int = logForCell.balanceThen
+        
         
         cell.when.text = when
         cell.why.text = why
-        cell.balance.text = "\(InOutMoney)"
-        
+        if logForCell.InOut == 1{
+            cell.balance.text = "+\(InOutMoney)"
+            //cell.balance.textColor = UIColor(rgb: 0x87A1FF)
+            
+        }
+        else{
+            cell.balance.text = "-\(InOutMoney)"
+            //cell.balance.textColor = UIColor(rgb: 0xFF6575)
+            
+        }
+        cell.balanceThen.text = "\(balanceT)"
         //make background clear
+        
         cell.layer.backgroundColor = UIColor.clear.cgColor
         
         return cell
@@ -55,12 +69,16 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         GroupNameLabel.text = currentGroup
         
+        //load current group logs
         if GroupInfos != nil, currentGroup != nil{
-            currentGroupLogs = GroupInfos[currentGroup!]!
+            if GroupInfos[currentGroup!] != nil{
+                currentGroupLogs = GroupInfos[currentGroup!]!
+            }
+    
         }
         
+        //load account info
         if AccountInfo != nil, currentGroup != nil{
-            
             
             if AccountInfo[currentGroup!] == nil{
                  AccountInfo[currentGroup!] = accountInfo(accountNum: "계좌번호를 등록해주세요", owner: "사용자를 등록해주세요", bankName: "은행을 등록해주세요", balance: 0)

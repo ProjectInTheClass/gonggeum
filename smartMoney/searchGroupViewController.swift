@@ -93,7 +93,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
             self.group.append(Group(title:"경제"))
             return
         }
-        self.group = data.compactMap {
+        self.group = data.flatMap {
             guard let title = $0["title"] as? String else {
                 return nil
             }

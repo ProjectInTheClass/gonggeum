@@ -15,6 +15,7 @@
 		0C98706A212188030006FBFC /* searchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C987069212188030006FBFC /* searchGroupViewController.swift */; };
 		0C98706C212188170006FBFC /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98706B212188170006FBFC /* LogDetailViewController.swift */; };
 		0C98706E212188290006FBFC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98706D212188290006FBFC /* Group.swift */; };
+
 		0C98707321218FF00006FBFC /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */; };
 		0C98707521219F840006FBFC /* newFundingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98707421219F840006FBFC /* newFundingController.swift */; };
 		0C98707721219F910006FBFC /* fundingInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98707621219F910006FBFC /* fundingInfoController.swift */; };
@@ -22,6 +23,12 @@
 		0C98707B21219FA60006FBFC /* arrayFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98707A21219FA60006FBFC /* arrayFile.swift */; };
 		0C98707D2121A6F00006FBFC /* memberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98707C2121A6EF0006FBFC /* memberCellTableViewCell.swift */; };
 		6C47072B212190BA0086940B /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */; };
+
+		0C987072212188AF0006FBFC /* memberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C987071212188AF0006FBFC /* memberCellTableViewCell.swift */; };
+		0C98707321218FF00006FBFC /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */; };
+		6C47072B212190BA0086940B /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */; };
+		6C564998211C1E8C00DEECD4 /* groupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */; };
+
 		6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */; };
 		9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */; };
 		9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */; };
@@ -66,11 +73,16 @@
 		0C987069212188030006FBFC /* searchGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchGroupViewController.swift; sourceTree = "<group>"; };
 		0C98706B212188170006FBFC /* LogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
 		0C98706D212188290006FBFC /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+
 		0C98707421219F840006FBFC /* newFundingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newFundingController.swift; sourceTree = "<group>"; };
 		0C98707621219F910006FBFC /* fundingInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fundingInfoController.swift; sourceTree = "<group>"; };
 		0C98707821219FA00006FBFC /* fundingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fundingListTableViewController.swift; sourceTree = "<group>"; };
 		0C98707A21219FA60006FBFC /* arrayFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arrayFile.swift; sourceTree = "<group>"; };
 		0C98707C2121A6EF0006FBFC /* memberCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memberCellTableViewCell.swift; sourceTree = "<group>"; };
+
+		0C987071212188AF0006FBFC /* memberCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memberCellTableViewCell.swift; sourceTree = "<group>"; };
+		6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupCellTableViewCell.swift; sourceTree = "<group>"; };
+
 		6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListEditController.swift; sourceTree = "<group>"; };
 		9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AccountInfo.plist; sourceTree = "<group>"; };
 		9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
@@ -335,14 +347,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C987068212187F20006FBFC /* MoneyLog.swift in Sources */,
+
 				0C98707721219F910006FBFC /* fundingInfoController.swift in Sources */,
+
 				9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */,
 				0C98706E212188290006FBFC /* Group.swift in Sources */,
 				0C98705C212185BB0006FBFC /* moneyLogTableViewCell.swift in Sources */,
 				0C987062212186930006FBFC /* ViewController.swift in Sources */,
 				9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */,
+
 				0C98707921219FA00006FBFC /* fundingListTableViewController.swift in Sources */,
 				0C98707521219F840006FBFC /* newFundingController.swift in Sources */,
+
+				6C564998211C1E8C00DEECD4 /* groupCellTableViewCell.swift in Sources */,
+
 				0C987060212186720006FBFC /* UIViewControllerModal.swift in Sources */,
 				0C98707B21219FA60006FBFC /* arrayFile.swift in Sources */,
 				6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */,

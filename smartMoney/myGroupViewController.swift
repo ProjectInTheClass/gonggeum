@@ -48,7 +48,7 @@ class myGroupViewController: UIViewController, UITableViewDataSource, UITableVie
             self.grouplist.append(Group(title:"볼링"))
             return
         }
-        self.grouplist = data.compactMap {
+        self.grouplist = data.flatMap {
             guard let title = $0["title"] as? String else {
                 return nil
             }
@@ -102,9 +102,10 @@ class myGroupViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let indexPath = self.groupsTable.indexPathForSelectedRow, let nextVC = segue.destination as? moneyLogViewController{
+        if let indexPath = self.groupsTable.indexPathForSelectedRow{
             let selectedData = grouplist[indexPath.row].title
-            nextVC.data = selectedData
+            currentGroup = selectedData
+            print("currentGroup  : ", selectedData)
         }
         if let searchGroupViewController = segue.destination as? searchGroupViewController {
             searchGroupViewController.addInfo = { group in
