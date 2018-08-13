@@ -95,8 +95,7 @@ func saveLog(){
     
     if let data = try? encoder.encode(GroupInfos) {
         do{
-
-            try! data.write(to: LogJsonUrl)
+            try data.write(to: LogJsonUrl)
             print("save finisehd!!! moneylog file path in swift file", LogJsonPath)
             }catch{
                 print("error!! cannot save moneylog.json" )

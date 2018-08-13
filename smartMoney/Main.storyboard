@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cor-g8-Dts">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cor-g8-Dts">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -202,7 +202,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-W8-JGz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home 복사본" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-W8-JGz">
                                 <rect key="frame" x="22" y="25" width="30" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -254,6 +254,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="GroupNameLabel" destination="FrH-XG-EGi" id="x4f-TN-Vgv"/>
+                        <outlet property="LogTable" destination="hGi-Dm-iBm" id="Lxd-eC-vXS"/>
                         <outlet property="accountNumLabel" destination="vpm-VQ-pIh" id="lha-vB-Eup"/>
                         <outlet property="balanceLabel" destination="uWd-3X-Kgc" id="E5w-uH-FX1"/>
                         <outlet property="bankNameLabel" destination="yL0-It-e8w" id="2mD-T2-rFx"/>
@@ -357,6 +358,14 @@
                                     <action selector="modalSave:" destination="2lK-XH-cFk" eventType="touchUpInside" id="3gl-k4-gel"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="multiply" translatesAutoresizingMaskIntoConstraints="NO" id="MiL-JP-dgo">
+                                <rect key="frame" x="16" y="30" width="29" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="ERy-QV-xKL">
+                                <rect key="frame" x="328" y="27" width="35" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="tcH-hw-aMi"/>
@@ -479,18 +488,6 @@
                                 </segments>
                                 <color key="tintColor" red="0.54422578256212883" green="0.48535051485285124" blue="0.93942338197969544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="save Icon" translatesAutoresizingMaskIntoConstraints="NO" id="WCb-F1-FSA">
-                                <rect key="frame" x="325" y="22" width="28" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v80-YN-laf">
-                                <rect key="frame" x="291" y="15" width="84" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ddd"/>
-                                <connections>
-                                    <action selector="saveNewLog:" destination="4P0-g7-5BZ" eventType="touchUpInside" id="bce-tL-AaM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MN-cZ-qGV">
                                 <rect key="frame" x="0.0" y="20" width="62" height="31"/>
                                 <constraints>
@@ -502,10 +499,6 @@
                                     <action selector="cancelAdding:" destination="4P0-g7-5BZ" eventType="touchUpInside" id="o0M-7T-lZH"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cancel Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MEB-pk-yx4">
-                                <rect key="frame" x="16" y="25" width="23" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내역 추가하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CI-yi-VbC">
                                 <rect key="frame" x="125" y="29" width="124" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -515,6 +508,22 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="highlighter_more_lighter" translatesAutoresizingMaskIntoConstraints="NO" id="XbN-dM-FWZ">
                                 <rect key="frame" x="111" y="29" width="146" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v80-YN-laf">
+                                <rect key="frame" x="292" y="20" width="84" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ddd"/>
+                                <connections>
+                                    <action selector="saveNewLog:" destination="4P0-g7-5BZ" eventType="touchUpInside" id="bce-tL-AaM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="multiply" translatesAutoresizingMaskIntoConstraints="NO" id="1WB-XM-yTM">
+                                <rect key="frame" x="17" y="20" width="29" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="dIp-8s-NPR">
+                                <rect key="frame" x="324" y="20" width="35" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -655,6 +664,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="multiply" translatesAutoresizingMaskIntoConstraints="NO" id="o4H-0t-zTf">
+                                <rect key="frame" x="318" y="20" width="29" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="aBf-Ql-1m1"/>
@@ -848,14 +861,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cancel Icon" width="512" height="512"/>
         <image name="detail_team_info" width="375" height="667"/>
         <image name="handinList" width="375" height="667"/>
         <image name="highlighter_more_lighter" width="226" height="31"/>
-        <image name="home" width="512" height="512"/>
+        <image name="home 복사본" width="512" height="512"/>
         <image name="main" width="375" height="667"/>
+        <image name="multiply" width="256" height="256"/>
         <image name="plus Icon" width="512" height="512"/>
-        <image name="save Icon" width="512" height="512"/>
+        <image name="tick" width="256" height="256"/>
         <image name="yellow_highlighter" width="226" height="31"/>
         <image name="배경사진" width="1196" height="896"/>
     </resources>

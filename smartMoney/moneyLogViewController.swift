@@ -18,6 +18,8 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var accountNumLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     
+    @IBOutlet weak var LogTable: UITableView!
+    
     
     
     //앞선 단계에서 보내온 데이터를 받기 위함.
@@ -48,9 +50,13 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         cell.why.text = why
         if logForCell.InOut == 1{
             cell.balance.text = "+\(InOutMoney)"
+            //cell.balance.textColor = UIColor(rgb: 0x87A1FF)
+            
         }
         else{
             cell.balance.text = "-\(InOutMoney)"
+            //cell.balance.textColor = UIColor(rgb: 0xFF6575)
+            
         }
         cell.balanceThen.text = "\(balanceT)"
         //make background clear

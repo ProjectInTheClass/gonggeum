@@ -49,7 +49,7 @@ class myGroupViewController: UIViewController, UITableViewDataSource, UITableVie
         guard let data = userDefaults.object(forKey: grouplistDefaultsKey) as? [[String: AnyObject]] else {
             return
         }
-        self.grouplist = data.compactMap {
+        self.grouplist = data.flatMap {
             guard let title = $0["title"] as? String else {
                 return nil
             }

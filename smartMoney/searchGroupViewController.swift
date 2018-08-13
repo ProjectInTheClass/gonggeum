@@ -87,7 +87,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         guard let data = userDefaults.object(forKey: groupDefaultsKey) as? [[String: AnyObject]] else {
             return
         }
-        self.group = data.compactMap {
+        self.group = data.flatMap {
             guard let title = $0["title"] as? String else {
                 return nil
             }
