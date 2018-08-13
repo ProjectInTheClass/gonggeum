@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DXKPMB-KSCpc-EUC-H.ttf">
+            <string>DXKPMB-KSCpc-EUC-H</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Item-->
         <scene sceneID="rUy-qD-l18">
@@ -75,13 +83,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="은행이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL0-It-e8w">
-                                <rect key="frame" x="16" y="102" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="95" width="63" height="17"/>
+                                <fontDescription key="fontDescription" name="DXKPMB-KSCpc-EUC-H" family="DX경필명조B" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계좌번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpm-VQ-pIh">
-                                <rect key="frame" x="16" y="160" width="171" height="21"/>
+                                <rect key="frame" x="16" y="149" width="171" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="171" id="GdK-Ap-hDT"/>
                                 </constraints>
@@ -90,7 +98,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예금주" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-0a-cBK">
-                                <rect key="frame" x="16" y="131" width="44.5" height="21"/>
+                                <rect key="frame" x="16" y="120" width="44.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,13 +110,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공금계좌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-tc-1L5">
-                                <rect key="frame" x="16" y="71" width="66" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <rect key="frame" x="16" y="67" width="59" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hGi-Dm-iBm">
-                                <rect key="frame" x="0.0" y="242" width="375" height="433"/>
+                                <rect key="frame" x="0.0" y="238" width="375" height="433"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="433" id="Jvb-tc-DoS"/>
@@ -175,17 +183,11 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모임 이름 띄우기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrH-XG-EGi">
-                                <rect key="frame" x="131" y="30" width="112" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="131" y="30" width="112" height="17"/>
+                                <fontDescription key="fontDescription" name="DXKPMB-KSCpc-EUC-H" family="DX경필명조B" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEB-Zu-Lrt">
-                                <rect key="frame" x="80" y="202" width="55" height="35"/>
-                                <connections>
-                                    <segue destination="4P0-g7-5BZ" kind="presentation" identifier="showLogDetail" id="ZTO-fX-Uni"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-W8-JGz">
                                 <rect key="frame" x="16" y="24" width="36" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -206,6 +208,13 @@
                                 <state key="normal" title="수정"/>
                                 <connections>
                                     <segue destination="2lK-XH-cFk" kind="presentation" id="jux-rp-Ss4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEB-Zu-Lrt">
+                                <rect key="frame" x="80" y="202" width="55" height="35"/>
+                                <state key="normal" title="ddd"/>
+                                <connections>
+                                    <segue destination="4P0-g7-5BZ" kind="presentation" identifier="showLogDetail" id="ZTO-fX-Uni"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -474,12 +483,16 @@
                                 <rect key="frame" x="325" y="22" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v80-YN-laf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v80-YN-laf">
                                 <rect key="frame" x="291" y="15" width="84" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="NlY-8L-sn3"/>
                                     <constraint firstAttribute="height" constant="36" id="kg1-nY-05M"/>
                                 </constraints>
+                                <state key="normal" title="ddd"/>
+                                <connections>
+                                    <action selector="saveNewLog:" destination="4P0-g7-5BZ" eventType="touchUpInside" id="bce-tL-AaM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MN-cZ-qGV">
                                 <rect key="frame" x="0.0" y="20" width="62" height="31"/>
@@ -487,6 +500,7 @@
                                     <constraint firstAttribute="height" constant="31" id="1cL-vT-Gwm"/>
                                     <constraint firstAttribute="width" constant="62" id="scb-R9-QwS"/>
                                 </constraints>
+                                <state key="normal" title="cancel"/>
                                 <connections>
                                     <action selector="cancelAdding:" destination="4P0-g7-5BZ" eventType="touchUpInside" id="o0M-7T-lZH"/>
                                 </connections>
@@ -542,6 +556,7 @@
                             <constraint firstItem="V06-Mj-0zd" firstAttribute="trailing" secondItem="g0B-dD-LFV" secondAttribute="trailing" constant="79" id="s1g-8q-pjE"/>
                             <constraint firstItem="3yf-UD-GnX" firstAttribute="top" secondItem="jnU-H6-J1g" secondAttribute="bottom" constant="8" id="saW-Br-XSX"/>
                             <constraint firstItem="V06-Mj-0zd" firstAttribute="top" secondItem="v80-YN-laf" secondAttribute="top" constant="5" id="vUb-nr-oBx"/>
+                            <constraint firstItem="V06-Mj-0zd" firstAttribute="trailing" secondItem="v80-YN-laf" secondAttribute="trailing" id="xo4-Bz-j6K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V06-Mj-0zd"/>
                     </view>

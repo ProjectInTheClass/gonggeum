@@ -33,6 +33,7 @@
 		9DE413E22110473B00BF8022 /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE413E12110473B00BF8022 /* StoryboardB.storyboard */; };
 		9DE413E421104DA600BF8022 /* addMoneyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */; };
 		9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE413E52110505B00BF8022 /* moneyLogViewController.swift */; };
+		AD08FF602121533400FB0891 /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD08FF5F2121533200FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */; };
 		AD0AE959211D5C2C003A7193 /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0AE958211D5C2C003A7193 /* LogDetailViewController.swift */; };
 		AD0AE95B211D68E5003A7193 /* MoneyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0AE95A211D68E5003A7193 /* MoneyLog.swift */; };
 		ADA4EF6F211ACB74008C9835 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4EF6E211ACB74008C9835 /* Group.swift */; };
@@ -89,6 +90,7 @@
 		9DE413E12110473B00BF8022 /* StoryboardB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
 		9DE413E321104DA600BF8022 /* addMoneyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMoneyLogViewController.swift; sourceTree = "<group>"; };
 		9DE413E52110505B00BF8022 /* moneyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLogViewController.swift; sourceTree = "<group>"; };
+		AD08FF5F2121533200FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DXKPMB-KSCpc-EUC-H.ttf"; sourceTree = "<group>"; };
 		AD0AE958211D5C2C003A7193 /* LogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
 		AD0AE95A211D68E5003A7193 /* MoneyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyLog.swift; sourceTree = "<group>"; };
 		ADA4EF6E211ACB74008C9835 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		9D922EF320F47F9500BFEFDD /* smartMoney */ = {
 			isa = PBXGroup;
 			children = (
+				AD08FF5F2121533200FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */,
 				0CF90B30211D7BD400AF860B /* newFundingController.swift */,
 				9D922F2820F480EE00BFEFDD /* UIViewControllerKeyboard.swift */,
 				9D922EF420F47F9500BFEFDD /* AppDelegate.swift */,
@@ -306,6 +309,7 @@
 				9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */,
 				9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */,
 				9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */,
+				AD08FF602121533400FB0891 /* DXKPMB-KSCpc-EUC-H.ttf in Resources */,
 				9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
