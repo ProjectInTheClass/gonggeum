@@ -28,14 +28,6 @@ class myGroupViewController: UIViewController, UITableViewDataSource, UITableVie
                 "title": $0.title,
                 ]
         }
-        if self.grouplist.count == 0{
-            data.append(["title": "맛집"])
-            data.append(["title": "영화감상"])
-            data.append(["title": "독서모임"])
-            data.append(["title": "여행"])
-            data.append(["title": "경영전략"])
-            data.append(["title": "블록체인"])
-            data.append(["title": "볼링"])}
         let userDefaults = UserDefaults.standard
         userDefaults.set(data, forKey : grouplistDefaultsKey)
         userDefaults.synchronize()
@@ -47,6 +39,13 @@ class myGroupViewController: UIViewController, UITableViewDataSource, UITableVie
     func loadAll() {
         let userDefaults = UserDefaults.standard
         guard let data = userDefaults.object(forKey: grouplistDefaultsKey) as? [[String: AnyObject]] else {
+            self.grouplist.append(Group(title:"맛집"))
+            self.grouplist.append(Group(title:"영화감상"))
+            self.grouplist.append(Group(title:"독서모임"))
+            self.grouplist.append(Group(title:"여행"))
+            self.grouplist.append(Group(title:"경영전략"))
+            self.grouplist.append(Group(title:"블록체인"))
+            self.grouplist.append(Group(title:"볼링"))
             return
         }
         self.grouplist = data.flatMap {

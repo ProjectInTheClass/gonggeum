@@ -60,20 +60,6 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
                 "title": $0.title,
                 ]
         }
-        if self.group.count == 0{
-            data.append(["title": "맛집"])
-            data.append(["title": "영화감상"])
-            data.append(["title": "독서모임"])
-            data.append(["title": "여행"])
-            data.append(["title": "경영전략"])
-            data.append(["title": "블록체인"])
-            data.append(["title": "볼링"])
-            data.append(["title": "산악"])
-            data.append(["title": "밴드"])
-            data.append(["title": "노래"])
-            data.append(["title": "합창"])
-            data.append(["title": "경제"])
-        }
         let userDefaults = UserDefaults.standard
         userDefaults.set(data, forKey : groupDefaultsKey)
         userDefaults.synchronize()
@@ -85,6 +71,18 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     func loadAll() {
         let userDefaults = UserDefaults.standard
         guard let data = userDefaults.object(forKey: groupDefaultsKey) as? [[String: AnyObject]] else {
+            self.group.append(Group(title: "맛집"))
+            self.group.append(Group(title:"영화감상"))
+            self.group.append(Group(title:"독서모임"))
+            self.group.append(Group(title:"여행"))
+            self.group.append(Group(title:"경영전략"))
+            self.group.append(Group(title: "블록체인"))
+            self.group.append(Group(title: "볼링"))
+            self.group.append(Group(title:"산악"))
+            self.group.append(Group(title: "밴드"))
+            self.group.append(Group(title:"노래"))
+            self.group.append(Group(title:"합창"))
+            self.group.append(Group(title:"경제"))
             return
         }
         self.group = data.flatMap {
@@ -169,13 +167,14 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.loadAll()
+        
         // 커스텀 셀 설정
         searchTable.dataSource = self
         searchTable.delegate = self
         groupSearch.delegate = self
         self.groupSearch.placeholder = "모임 검색"
-        
-        self.loadAll()
+
         
     }
     
