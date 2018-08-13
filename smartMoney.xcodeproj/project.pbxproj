@@ -17,6 +17,7 @@
 		0C98706E212188290006FBFC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98706D212188290006FBFC /* Group.swift */; };
 		0C9870702121883B0006FBFC /* arrayFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98706F2121883B0006FBFC /* arrayFile.swift */; };
 		0C987072212188AF0006FBFC /* memberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C987071212188AF0006FBFC /* memberCellTableViewCell.swift */; };
+		0C98707321218FF00006FBFC /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */; };
 		0CF90B2C211D7B4800AF860B /* fundingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B2A211D7B4700AF860B /* fundingListTableViewController.swift */; };
 		0CF90B2D211D7B4800AF860B /* fundingInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B2B211D7B4700AF860B /* fundingInfoController.swift */; };
 		0CF90B31211D7BD400AF860B /* newFundingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B30211D7BD400AF860B /* newFundingController.swift */; };
@@ -308,6 +309,7 @@
 				9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */,
 				9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */,
 				9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */,
+				0C98707321218FF00006FBFC /* DXKPMB-KSCpc-EUC-H.ttf in Resources */,
 				9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
