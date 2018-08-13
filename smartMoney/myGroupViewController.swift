@@ -8,16 +8,65 @@
 
 import UIKit
 
-class myGroupViewController: UIViewController, UITableViewDataSource {
+let grouplistDefaultsKey = "grouplistDefaultsKey"
+
+class myGroupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var groupsTable: UITableView!
     
+    // grouplist 관련
+    var grouplist = [Group]() {
+        didSet{
+            self.saveAll()
+        }
+    }
+    
+    // group 저장 관련 시작
+    func saveAll() {
+        var data = self.grouplist.map {
+            [
+                "title": $0.title,
+                ]
+        }
+        if self.grouplist.count == 0{
+            data.append(["title": "맛집"])
+            data.append(["title": "영화감상"])
+            data.append(["title": "독서모임"])
+            data.append(["title": "여행"])
+            data.append(["title": "경영전략"])
+            data.append(["title": "블록체인"])
+            data.append(["title": "볼링"])}
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(data, forKey : grouplistDefaultsKey)
+        userDefaults.synchronize()
+    }
+    // group 저장 관련 끝
+    
+    
+    // group 불러오기 관련 시작
+    func loadAll() {
+        let userDefaults = UserDefaults.standard
+        guard let data = userDefaults.object(forKey: grouplistDefaultsKey) as? [[String: AnyObject]] else {
+            return
+        }
+        self.grouplist = data.compactMap {
+            guard let title = $0["title"] as? String else {
+                return nil
+            }
+            return Group(title: title)
+        }
+    }
+    // group 불러오기 관련 끝
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        groupsTable.dataSource = self
+        groupsTable.delegate = self
+        
+        self.loadAll()
         // Do any additional setup after loading the view.
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         groupsTable.reloadData()
     }
@@ -26,9 +75,6 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return grouplist.count
@@ -36,9 +82,12 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myGroups", for: indexPath)
-        if let g = cell.textLabel{
-            g.text = grouplist[indexPath.row].title
-        }
+        //        if let g = cell.textLabel{
+        //            g.text = grouplist[indexPath.row].title
+        //        }
+        //
+        let group = self.grouplist[indexPath.row]
+        cell.textLabel?.text = group.title
         
         return cell
     }
@@ -54,22 +103,26 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let indexPath = self.groupsTable.indexPathForSelectedRow{
+        if let indexPath = self.groupsTable.indexPathForSelectedRow, let nextVC = segue.destination as? moneyLogViewController{
             let selectedData = grouplist[indexPath.row].title
-            currentGroup = selectedData
-            print("current Group changed to : ", currentGroup)
+            nextVC.data = selectedData
         }
- 
+        if let searchGroupViewController = segue.destination as? searchGroupViewController {
+            searchGroupViewController.addInfo = { group in
+                self.grouplist.append(group)
+                self.groupsTable.reloadData()
+            }
+        }
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destinationViewController.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

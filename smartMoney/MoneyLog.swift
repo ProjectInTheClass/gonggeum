@@ -26,6 +26,7 @@ struct MoneyLog: Codable{
     var money: Int
     var memo: String
     var InOut: Int
+    var balanceThen : Int
     //evidence info? image? string?
 }
 
@@ -57,7 +58,6 @@ func loadLog(){
         
         do{
             GroupInfos = try decoder.decode([String:[MoneyLog]].self, from: data)
-            print(GroupInfos)
         }catch{
             print("error!!! cannot decode moneyLog.json file!!")
         }
@@ -72,7 +72,6 @@ func loadLog(){
         
         do{
             AccountInfo = try decoder.decode([String:accountInfo].self, from: data)
-            print(AccountInfo)
         }catch{
             print("error!!! cannot decode accountInfo.json file!!")
         }
@@ -81,7 +80,6 @@ func loadLog(){
         print("error!!! cannot read from accountInfo.json file")
     }
     
- 
 
     print("current Group : ", currentGroup)
     print("current Group Logs : ", currentGroupLogs)
@@ -130,8 +128,8 @@ func addLog(_ log: MoneyLog){
         if AccountInfo[cg] != nil {
             AccountInfo[cg]!.balance += log.InOut * log.money
         }else {
-            //없을 경우 초기화
-            AccountInfo[cg] = accountInfo(accountNum: "계좌번호를 등록해주세요", owner: "사용자를 등록해주세요", bankName: "은행을 등록해주세요", balance: 0)
+            print("AccountInfo[currentgroup] is nil!")
+          
         }
     }
 
