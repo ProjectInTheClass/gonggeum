@@ -10,15 +10,3 @@ class Group {
         members = []
     }
 }
-
-var grouplist = [
-    Group(title: "맛집"),
-    Group(title: "영화감상"),
-    Group(title: "독서모임"),
-    Group(title: "여행"),
-    Group(title: "경영전략"),
-    Group(title: "블록체인"),
-    Group(title: "볼링")
-    ]
-
-

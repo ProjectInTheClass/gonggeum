@@ -21,7 +21,8 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func groupAdd(_ sender: Any) {
         if let indexPath = searchTable.indexPathForSelectedRow {
             let selectedGroup = self.group[indexPath.row]
-            grouplist.append(selectedGroup)
+            self.addInfo?(selectedGroup)
+            print(selectedGroup.title)
             self.dismiss(animated: true, completion: nil)
         }
         else {
@@ -38,12 +39,14 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         }
         
     }
-
+    
     // search bar 필요 변수
     var filteredData : [Group] = []
     
     var searchActive = false
-
+    
+    var addInfo: ((Group) -> Void)?
+    
     var group = [Group](){
         didSet{
             self.saveAll()
@@ -58,18 +61,19 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
                 ]
         }
         if self.group.count == 0{
-        data.append(["title": "맛집"])
-        data.append(["title": "영화감상"])
-        data.append(["title": "독서모임"])
-        data.append(["title": "여행"])
-        data.append(["title": "경영전략"])
-        data.append(["title": "블록체인"])
-        data.append(["title": "볼링"])
-        data.append(["title": "산악"])
-        data.append(["title": "밴드"])
-        data.append(["title": "노래"])
-        data.append(["title": "합창"])
-        data.append(["title": "경제"])}
+            data.append(["title": "맛집"])
+            data.append(["title": "영화감상"])
+            data.append(["title": "독서모임"])
+            data.append(["title": "여행"])
+            data.append(["title": "경영전략"])
+            data.append(["title": "블록체인"])
+            data.append(["title": "볼링"])
+            data.append(["title": "산악"])
+            data.append(["title": "밴드"])
+            data.append(["title": "노래"])
+            data.append(["title": "합창"])
+            data.append(["title": "경제"])
+        }
         let userDefaults = UserDefaults.standard
         userDefaults.set(data, forKey : groupDefaultsKey)
         userDefaults.synchronize()
@@ -83,7 +87,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         guard let data = userDefaults.object(forKey: groupDefaultsKey) as? [[String: AnyObject]] else {
             return
         }
-        self.group = data.flatMap {
+        self.group = data.compactMap {
             guard let title = $0["title"] as? String else {
                 return nil
             }
@@ -122,7 +126,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         let keyword = groupSearch.text
         self.searchDisplayController?.isActive = false
         groupSearch.text = keyword
-
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -145,7 +149,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         }
         return cell
     }
-
+    
     // searchBar 관련 시작
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -170,7 +174,7 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         searchTable.delegate = self
         groupSearch.delegate = self
         self.groupSearch.placeholder = "모임 검색"
-
+        
         self.loadAll()
         
     }
@@ -189,3 +193,4 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
 }
+
