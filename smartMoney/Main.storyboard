@@ -73,21 +73,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="은행이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL0-It-e8w">
-                                <rect key="frame" x="16" y="116" width="82" height="17"/>
+                                <rect key="frame" x="16" y="116" width="212" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DXKPMB-KSCpc-EUC-H" family="DX경필명조B" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="계좌번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpm-VQ-pIh">
-                                <rect key="frame" x="16" y="166" width="171" height="17"/>
+                                <rect key="frame" x="16" y="166" width="222" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DXKPMB-KSCpc-EUC-H" family="DX경필명조B" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예금주" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-0a-cBK">
-                                <rect key="frame" x="16" y="141" width="82" height="17"/>
+                                <rect key="frame" x="16" y="141" width="198" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DXKPMB-KSCpc-EUC-H" family="DX경필명조B" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -212,6 +212,14 @@
                                     <segue destination="4P0-g7-5BZ" kind="presentation" identifier="showLogDetail" id="ZTO-fX-Uni"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrw-lt-SNP">
+                                <rect key="frame" x="11" y="21" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Cor-g8-Dts" kind="show" id="5kj-VW-dDj"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="잔고" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc9-BP-gAv">
                                 <rect key="frame" x="324" y="125" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -247,7 +255,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4032.8000000000002" y="294.60269865067471"/>
+            <point key="canvasLocation" x="4032.5" y="294.5"/>
         </scene>
         <!--Edit Account View Controller-->
         <scene sceneID="AYY-Tj-LGH">
@@ -327,9 +335,9 @@
                         <viewLayoutGuide key="safeArea" id="tcH-hw-aMi"/>
                     </view>
                     <connections>
-                        <outlet property="accountNum" destination="YtJ-eP-oiW" id="woJ-zW-1L9"/>
-                        <outlet property="bankName" destination="e4V-ll-ISC" id="WJu-Mu-cpX"/>
-                        <outlet property="ownerName" destination="yh7-Eh-X8o" id="xg7-tE-4s8"/>
+                        <outlet property="accountNumField" destination="YtJ-eP-oiW" id="ehm-1R-jXB"/>
+                        <outlet property="bankNameField" destination="e4V-ll-ISC" id="RP9-6t-Ndr"/>
+                        <outlet property="ownerField" destination="yh7-Eh-X8o" id="SId-Nl-V4Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNp-bb-g1L" userLabel="First Responder" sceneMemberID="firstResponder"/>

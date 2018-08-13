@@ -54,14 +54,26 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
 
     override func viewWillAppear(_ animated: Bool) {
         GroupNameLabel.text = currentGroup
-   
+        
+        if GroupInfos != nil, currentGroup != nil{
+            currentGroupLogs = GroupInfos[currentGroup!]!
+        }
+        
         if AccountInfo != nil, currentGroup != nil{
-            let info = AccountInfo[currentGroup!]!
             
+            
+            if AccountInfo[currentGroup!] == nil{
+                 AccountInfo[currentGroup!] = accountInfo(accountNum: "계좌번호를 등록해주세요", owner: "사용자를 등록해주세요", bankName: "은행을 등록해주세요", balance: 0)
+            }
+                
+            
+            let info = AccountInfo[currentGroup!]!
+        
             bankNameLabel.text = info.bankName
             accountNumLabel.text = info.accountNum
             ownerLabel.text = info.owner
             balanceLabel.text = "\(info.balance)"
+    
         }
     }
     
