@@ -16,7 +16,6 @@
 		6C564998211C1E8C00DEECD4 /* groupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */; };
 		6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */; };
 		6C56499A211C1E8C00DEECD4 /* memberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564996211C1E8C00DEECD4 /* memberCellTableViewCell.swift */; };
-		6C56499C211C2E3400DEECD4 /* searchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C56499B211C2E3300DEECD4 /* searchGroupViewController.swift */; };
 		9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */; };
 		9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */; };
 		9D1F001A211182F3007E4B59 /* moneyLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */; };
@@ -65,7 +64,6 @@
 		6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupCellTableViewCell.swift; sourceTree = "<group>"; };
 		6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListEditController.swift; sourceTree = "<group>"; };
 		6C564996211C1E8C00DEECD4 /* memberCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memberCellTableViewCell.swift; sourceTree = "<group>"; };
-		6C56499B211C2E3300DEECD4 /* searchGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchGroupViewController.swift; sourceTree = "<group>"; };
 		9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AccountInfo.plist; sourceTree = "<group>"; };
 		9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		9D1F0019211182F3007E4B59 /* moneyLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLogTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 		9D922EF320F47F9500BFEFDD /* smartMoney */ = {
 			isa = PBXGroup;
 			children = (
-				6C564993211C1E8C00DEECD4 /* searchGroupViewController.swift */,
 				9D922F2820F480EE00BFEFDD /* UIViewControllerKeyboard.swift */,
 				9D922EF420F47F9500BFEFDD /* AppDelegate.swift */,
 				9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */,
@@ -159,7 +156,7 @@
 				9D922F0020F47F9500BFEFDD /* Info.plist */,
 				9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */,
 				9DE413DF2110472B00BF8022 /* StoryboardA.storyboard */,
-				6C56499B211C2E3300DEECD4 /* searchGroupViewController.swift */,
+				6C564993211C1E8C00DEECD4 /* searchGroupViewController.swift */,
 				6C564991211C1E4D00DEECD4 /* Group.swift */,
 				6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */,
 				6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */,
@@ -335,7 +332,6 @@
 				6C4C3164211ACDAF00BC8E97 /* fundingListTableViewController.swift in Sources */,
 				6C564998211C1E8C00DEECD4 /* groupCellTableViewCell.swift in Sources */,
 				6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */,
-				6C56499C211C2E3400DEECD4 /* searchGroupViewController.swift in Sources */,
 				6C4C3160211ACDA500BC8E97 /* arrayFile.swift in Sources */,
 				9DE413E62110505B00BF8022 /* moneyLogViewController.swift in Sources */,
 				6C564997211C1E8C00DEECD4 /* searchGroupViewController.swift in Sources */,
