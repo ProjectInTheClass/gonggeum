@@ -10,6 +10,14 @@ import Foundation
 
 //initialize
 
+
+struct accountInfo: Codable{
+    var accountNum : String
+    var owner : String
+    var bankName : String
+    var balance : Int
+}
+
 struct MoneyLog: Codable{
     var y: Int
     var m: Int
@@ -22,7 +30,10 @@ struct MoneyLog: Codable{
 }
 
 //GroupInfos = ["swift class" : [log1, log2, log3...]]
+//AccountInfo = ["swift class" : {"accountNum" : "111-111-111",...}]
 var GroupInfos : [String : [MoneyLog]] = [:]
+var AccountInfo : [String : accountInfo] = [:]
+
 
 var currentGroup : String?
 var currentGroupLogs :[MoneyLog] = []
@@ -33,110 +44,97 @@ let LogJsonPath = NSHomeDirectory() + "/Documents/moneyLog.json"
 let LogJsonUrl = URL(fileURLWithPath: LogJsonPath)
 
 //plist
-let AccountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist")
-var accountInfo = NSMutableDictionary(contentsOfFile: AccountInfoPath!)
+let AccountInfoPath = NSHomeDirectory() + "/Documents/accountInfo.json"
+var AccountInfoUrl = URL(fileURLWithPath: AccountInfoPath)
 
 
 func loadLog(){
     // 파일에서 읽어서 logs에 대입
     let decoder = JSONDecoder()
-    
-    print("======", LogJsonUrl)
-    print("======", LogJsonPath)
-    
-    print("======", AccountInfoPath)
-    print("======", accountInfo)
-    
-    print(currentGroup)
-    print(currentGroupLogs)
-    
-    
-    
-    if let infosFromFile = NSDictionary(contentsOfFile: LogJsonPath) as? [String:[MoneyLog]]{
-        GroupInfos = infosFromFile
-    }
-    
-    else {
-        GroupInfos = ["swift study" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)], "swift study2" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]]
-        currentGroup = "swift study"
-        currentGroupLogs = GroupInfos["swift study"]!
+
+    do{
+        let data = try Data(contentsOf: LogJsonUrl)
         
+        do{
+            GroupInfos = try decoder.decode([String:[MoneyLog]].self, from: data)
+            print(GroupInfos)
+        }catch{
+            print("error!!! cannot decode moneyLog.json file!!")
+        }
+        
+    }catch{
+        print("error!!! cannot read from moneyLog.json file")
     }
     
-    //initialize current Group to first group in JSON file
-    //currentGroup = infosFromFile[0].name
+    
+    do{
+        let data = try Data(contentsOf: AccountInfoUrl)
+        
+        do{
+            AccountInfo = try decoder.decode([String:accountInfo].self, from: data)
+            print(AccountInfo)
+        }catch{
+            print("error!!! cannot decode accountInfo.json file!!")
+        }
+        
+    }catch{
+        print("error!!! cannot read from accountInfo.json file")
+    }
+    
+ 
+
     print("current Group : ", currentGroup)
     print("current Group Logs : ", currentGroupLogs)
-    /*
-    if let data = try? Data.init(contentsOf: LogJsonUrl), let infosFromFile = try? decoder.decode(GroupInfos.self, from: data){
-        print("개수 : ", infosFromFile.count)
-        
-        if infosFromFile.count > 0 {
-            GroupInfos = infosFromFile
-            currentGroupLogs = infosFromFile[0].logs
-        }
-        else {
-            GroupInfos = ["swift study" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)], "swift study2" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]]
-            currentGroup = "swift study"
-            currentGroupLogs = GroupInfos["swift study"]!
 
-        
-        }
-        
-        //initialize current Group to first group in JSON file
-        //currentGroup = infosFromFile[0].name
-        print("current Group : ", currentGroup)
-        print("current Group Logs : ", currentGroupLogs)
-    }
-    */
-    // plist
     
 }
 
 func saveLog(){
     // logs를 파일로 저장
-
+    
     let encoder = JSONEncoder()
     
     if let data = try? encoder.encode(GroupInfos) {
-            print("JSON file path in swift file", LogJsonPath)
+        do{
+            print("moneylog file path in swift file", LogJsonPath)
             try! data.write(to: LogJsonUrl)
-            print("saving logs[] to JSON file finished!")
+            }catch{
+                print("error!! cannot save moneylog.json" )
         }
-    
-    
-    // plist 저장
-    if let path = AccountInfoPath, let info = accountInfo{
-        info.write(toFile: path, atomically: true)
-        print("finished updating balance in plist")
-        print(info)
     }
+    
+    if let data = try? encoder.encode(AccountInfo) {
+        do{
+            print("accountinfo file path in swift file", AccountInfoPath)
+            try! data.write(to: AccountInfoUrl)
+        }catch{
+            print("error!! cannot save accoutnInfo.json")
+        }
+    }
+    
+    //update infos back after saving
+    loadLog()
 }
 
 
 
 func addLog(_ log: MoneyLog){
-    if let cg = currentGroup, var l = GroupInfos[cg]{
-        l.append(log)
-    }
-    //update balance in plist
-    if let info = accountInfo{
-        var balanceInfo = info.object(forKey: "balance") as! Int
-        balanceInfo += log.InOut * log.money
+    if let cg = currentGroup {
+        if GroupInfos[cg] != nil {
+            GroupInfos[cg]!.append(log)
+        }
+        else {
+            GroupInfos[cg] = [log]
+        }
+        
+        if AccountInfo[cg] != nil {
+            AccountInfo[cg]!.balance += log.InOut * log.money
+        }else {
+            //없을 경우 초기화
+            AccountInfo[cg] = accountInfo(accountNum: "계좌번호를 등록해주세요", owner: "사용자를 등록해주세요", bankName: "은행을 등록해주세요", balance: 0)
+        }
     }
 
 }
 
-func updateBalance(IsIn :Int, howMuch :Int){
-    
-    
-//    if let AccountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist"), let accountInfo = NSMutableDictionary(contentsOfFile: AccountInfoPath){
-//        var balanceInfo = accountInfo.object(forKey: "balance") as! Int
-//        balanceInfo = balanceInfo + IsIn * howMuch
-//        accountInfo.write(toFile: AccountInfoPath, atomically: true)
-//
-//        print("changed in balance to ", balanceInfo)
-//    }
-    
-    
-}
+

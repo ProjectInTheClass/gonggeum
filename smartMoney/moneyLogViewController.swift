@@ -54,27 +54,15 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
 
     override func viewWillAppear(_ animated: Bool) {
         GroupNameLabel.text = currentGroup
-        if let ACinfo = accountInfo{
-
-                if let bankName : String = ACinfo["bankName"] as? String{
-                    bankNameLabel.text = bankName
-                }
-
-                if let accountNum : String = ACinfo["accountNum"] as? String{
-                    accountNumLabel.text = accountNum
-                }
-
-                if let owner : String = ACinfo["owner"] as? String{
-                    ownerLabel.text = owner
-                }
-                
-                if let balance : Int = ACinfo["balance"] as? Int{
-                    balanceLabel.text = "\(balance)"
-                }
- 
-            }
- 
-        
+   
+        if AccountInfo != nil, currentGroup != nil{
+            let info = AccountInfo[currentGroup!]!
+            
+            bankNameLabel.text = info.bankName
+            accountNumLabel.text = info.accountNum
+            ownerLabel.text = info.owner
+            balanceLabel.text = "\(info.balance)"
+        }
     }
     
   
