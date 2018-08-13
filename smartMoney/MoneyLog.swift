@@ -26,6 +26,7 @@ struct MoneyLog: Codable{
     var money: Int
     var memo: String
     var InOut: Int
+    var balanceThen : Int
     //evidence info? image? string?
 }
 
@@ -57,8 +58,6 @@ func loadLog(){
         
         do{
             GroupInfos = try decoder.decode([String:[MoneyLog]].self, from: data)
-            
-            print(GroupInfos)
         }catch{
             print("error!!! cannot decode moneyLog.json file!!")
         }
@@ -73,7 +72,6 @@ func loadLog(){
         
         do{
             AccountInfo = try decoder.decode([String:accountInfo].self, from: data)
-            print(AccountInfo)
         }catch{
             print("error!!! cannot decode accountInfo.json file!!")
         }
@@ -82,7 +80,6 @@ func loadLog(){
         print("error!!! cannot read from accountInfo.json file")
     }
     
- 
 
     print("current Group : ", currentGroup)
     print("current Group Logs : ", currentGroupLogs)
