@@ -83,32 +83,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.63529411764705879" green="0.64313725490196083" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" id="VGz-re-UqX" customClass="groupCellTableViewCell" customModule="smartMoney">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" textLabel="AQY-p2-izk" style="IBUITableViewCellStyleDefault" id="VGz-re-UqX" customClass="groupCellTableViewCell" customModule="smartMoney">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VGz-re-UqX" id="QpN-Nw-icx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSG-9v-u9f" userLabel="groupN">
-                                                    <rect key="frame" x="15" y="11" width="345" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="bCh-QM-fuj"/>
-                                                    </constraints>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AQY-p2-izk">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="DXKPMB-KSCpc-EUC-H" family="DX경필명조B" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="hSG-9v-u9f" firstAttribute="leading" secondItem="QpN-Nw-icx" secondAttribute="leading" constant="15" id="9c1-3R-Ido"/>
-                                                <constraint firstItem="hSG-9v-u9f" firstAttribute="top" secondItem="QpN-Nw-icx" secondAttribute="top" constant="11" id="V7x-6e-0HE"/>
-                                                <constraint firstAttribute="trailing" secondItem="hSG-9v-u9f" secondAttribute="trailing" constant="15" id="o0d-zl-ftg"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="groupN" destination="hSG-9v-u9f" id="nGm-va-EyM"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

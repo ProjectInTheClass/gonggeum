@@ -20,9 +20,17 @@ class searchGroupViewController: UIViewController, UITableViewDataSource, UITabl
     }
     @IBAction func groupAdd(_ sender: Any) {
         if let indexPath = searchTable.indexPathForSelectedRow {
-            let selectedGroup = self.group[indexPath.row]
-            self.addInfo?(selectedGroup)
-            print(selectedGroup.title)
+            
+            if filteredData.count != 0{
+                let selectedGroup = Group(title: filteredData[indexPath.row].title)
+                self.addInfo?(selectedGroup)
+                print(selectedGroup.title)
+            }
+            else{
+                let selectedGroup = self.group[indexPath.row]
+                self.addInfo?(selectedGroup)
+                print(selectedGroup.title)
+            }
             self.dismiss(animated: true, completion: nil)
         }
         else {
