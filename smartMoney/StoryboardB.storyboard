@@ -18,15 +18,11 @@
         <!--Funding List Table View Controller-->
         <scene sceneID="cFv-2T-kQr">
             <objects>
-                <tableViewController id="eft-0f-08w" customClass="fundingListTableViewController" sceneMemberID="viewController">
+                <tableViewController id="eft-0f-08w" customClass="fundingListTableViewController" customModule="smartMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="f4z-wG-tw7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="EVo-gZ-Vgs">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fundingCell" textLabel="966-p0-1z2" detailTextLabel="HA8-Ph-AfE" style="IBUITableViewCellStyleValue1" id="dZI-Mr-afd">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -71,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3t-W9-Jb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4970" y="-31"/>
+            <point key="canvasLocation" x="4968.8000000000002" y="-31.03448275862069"/>
         </scene>
         <!--New Funding Controller-->
         <scene sceneID="wnH-va-CT2">
