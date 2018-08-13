@@ -12,6 +12,7 @@
 		6C440220212159550077BAFA /* fundingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C44021F212159550077BAFA /* fundingListTableViewController.swift */; };
 		6C440222212159630077BAFA /* newFundingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C440221212159630077BAFA /* newFundingController.swift */; };
 		6C440224212159710077BAFA /* arrayFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C440223212159710077BAFA /* arrayFile.swift */; };
+		6C44022621216DB80077BAFA /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C44022521216DA30077BAFA /* DXKPMB-KSCpc-EUC-H.ttf */; };
 		6C564998211C1E8C00DEECD4 /* groupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */; };
 		6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */; };
 		9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */; };
@@ -62,6 +63,7 @@
 		6C44021F212159550077BAFA /* fundingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = fundingListTableViewController.swift; path = "../../마스터/smartMoney/fundingListTableViewController.swift"; sourceTree = "<group>"; };
 		6C440221212159630077BAFA /* newFundingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = newFundingController.swift; path = "../../마스터/smartMoney/newFundingController.swift"; sourceTree = "<group>"; };
 		6C440223212159710077BAFA /* arrayFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = arrayFile.swift; path = "../../마스터/smartMoney/arrayFile.swift"; sourceTree = "<group>"; };
+		6C44022521216DA30077BAFA /* DXKPMB-KSCpc-EUC-H.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DXKPMB-KSCpc-EUC-H.ttf"; path = "../../../Downloads/DXKPMB-KSCpc-EUC-H.ttf"; sourceTree = "<group>"; };
 		6C564991211C1E4D00DEECD4 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		6C564993211C1E8C00DEECD4 /* searchGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchGroupViewController.swift; sourceTree = "<group>"; };
 		6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				6C44021F212159550077BAFA /* fundingListTableViewController.swift */,
 				6C440221212159630077BAFA /* newFundingController.swift */,
 				6C440223212159710077BAFA /* arrayFile.swift */,
+				6C44022521216DA30077BAFA /* DXKPMB-KSCpc-EUC-H.ttf */,
 			);
 			path = smartMoney;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */,
 				9D922EFC20F47F9500BFEFDD /* Assets.xcassets in Resources */,
 				9D2A428F210712AB002B1DA9 /* Main.storyboard in Resources */,
+				6C44022621216DB80077BAFA /* DXKPMB-KSCpc-EUC-H.ttf in Resources */,
 				9DE413E02110472B00BF8022 /* StoryboardA.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
