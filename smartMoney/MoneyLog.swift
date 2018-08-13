@@ -72,6 +72,7 @@ func loadLog(){
         
         do{
             AccountInfo = try decoder.decode([String:accountInfo].self, from: data)
+            
         }catch{
             print("error!!! cannot decode accountInfo.json file!!")
         }
@@ -94,8 +95,9 @@ func saveLog(){
     
     if let data = try? encoder.encode(GroupInfos) {
         do{
-            print("moneylog file path in swift file", LogJsonPath)
+
             try! data.write(to: LogJsonUrl)
+            print("save finisehd!!! moneylog file path in swift file", LogJsonPath)
             }catch{
                 print("error!! cannot save moneylog.json" )
         }
@@ -103,8 +105,8 @@ func saveLog(){
     
     if let data = try? encoder.encode(AccountInfo) {
         do{
-            print("accountinfo file path in swift file", AccountInfoPath)
             try! data.write(to: AccountInfoUrl)
+            print("save finished!! accountinfo file path in swift file", AccountInfoPath)
         }catch{
             print("error!! cannot save accoutnInfo.json")
         }

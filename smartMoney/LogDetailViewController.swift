@@ -12,6 +12,11 @@ class LogDetailViewController: UIViewController {
     
     var indexForLogs : Int?
 
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var eventLabel: UILabel!
+    @IBOutlet weak var howMuchLabel: UILabel!
+    @IBOutlet weak var balanceThenLabel: UILabel!
+    @IBOutlet weak var memoLabel: UILabel!
     
     @IBAction func DetailLogCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -19,6 +24,9 @@ class LogDetailViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        
     }
     
   
