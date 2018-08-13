@@ -9,94 +9,66 @@
 import UIKit
 
 
-struct MoneyLog: Codable{
-    var y: Int
-    var m: Int
-    var d: Int
-    var eventName: String
-    var money: Int
-    var memo: String
-    var inOut: Bool
-    //evidence info? image? string?
-}
-
-class groupMoneyInfo{
-   
-    var logList : [MoneyLog]
-    
-    init(){
-        print("making infoList")
-        logList = []
-
-    }
-    
-    func addInfo(newinfo : MoneyLog) {
-        logList.append(newinfo)
-    }
-    
-    /*
-     func deleteInfo(target: Info) -> Info {
-     
-     }
-     */
-    
-    
-}
-
-
 class moneyLogViewController: UIViewController, UITableViewDataSource {
+    //공금계좌 정보 라벨
+    
+    @IBOutlet weak var GroupNameLabel: UILabel!
     @IBOutlet weak var bankNameLabel: UILabel!
-    @IBOutlet weak var accountNumlabel: UILabel!
     @IBOutlet weak var ownerLabel: UILabel!
+    @IBOutlet weak var accountNumLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
+    
+    
     
     //앞선 단계에서 보내온 데이터를 받기 위함.
     var data : String?
     
-   
-    let group1 = groupMoneyInfo()
-    var log  = MoneyLog(y : 2018, m : 1, d : 1, eventName : "MT", money : 10000, memo : "5명 참석", inOut : true)
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return group1.logList.count
+    
+        return currentGroupLogs.count
+   
     }
     
+    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moneyLogCell", for: indexPath) as! moneyLogTableViewCell
         
-        let when : String = "1"
-        let why : String = "hi"
-        let balance: Int = 1
+        let logForCell = currentGroupLogs[(currentGroupLogs.count-1) - indexPath.row]
+        let when : String = "\(logForCell.y)" + "." +
+                            "\(logForCell.m)" + "." +
+                            "\(logForCell.d)"
+        let why : String = logForCell.eventName
+        let InOutMoney : Int = logForCell.money * logForCell.InOut
         
         cell.when.text = when
         cell.why.text = why
-        cell.balance.text = "\(balance)"
+        cell.balance.text = "\(InOutMoney)"
+        
+        //make background clear
+        cell.layer.backgroundColor = UIColor.clear.cgColor
         
         return cell
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
-       print("view appear error?")
-        
-        if let accountInfoPath = Bundle.main.path(forResource: "AccountInfo", ofType: "plist"), let accountInfo = NSDictionary(contentsOfFile: accountInfoPath)
-            {
-                print(accountInfoPath)
-                print(accountInfo)
-                
-                if let bankName : String = accountInfo["bankName"] as? String{
+        GroupNameLabel.text = currentGroup
+        if let ACinfo = accountInfo{
+
+                if let bankName : String = ACinfo["bankName"] as? String{
                     bankNameLabel.text = bankName
                 }
-                
-                if let accountNum : String = accountInfo["accountNum"] as? String{
-                    accountNumlabel.text = accountNum
+
+                if let accountNum : String = ACinfo["accountNum"] as? String{
+                    accountNumLabel.text = accountNum
                 }
-                
-                if let owner : String = accountInfo["owner"] as? String{
+
+                if let owner : String = ACinfo["owner"] as? String{
                     ownerLabel.text = owner
                 }
                 
-                if let balance : Int = accountInfo["balance"] as? Int{
+                if let balance : Int = ACinfo["balance"] as? Int{
                     balanceLabel.text = "\(balance)"
                 }
  
@@ -105,6 +77,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
         
     }
     
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +90,11 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
     }
     
 
+    
+   
+    
+    
+    
     /*
     // MARK: - Navigation
 

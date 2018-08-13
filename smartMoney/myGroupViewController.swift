@@ -12,14 +12,16 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var groupsTable: UITableView!
     
-    var groups : [String] = ["Group1", "Group2", "Group3"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        groupsTable.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,23 +31,33 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        return grouplist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myGroups", for: indexPath)
         if let g = cell.textLabel{
-            g.text = groups[indexPath.row]
+            g.text = grouplist[indexPath.row].title
         }
         
         return cell
     }
     
+    // 모임 삭제
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            grouplist.remove(at: indexPath.row)
+            groupsTable.reloadData()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let indexPath = self.groupsTable.indexPathForSelectedRow, let nextVC = segue.destination as? moneyLogViewController{
-            let selectedData = groups[indexPath.row]
-            nextVC.data = selectedData
+        if let indexPath = self.groupsTable.indexPathForSelectedRow{
+            let selectedData = grouplist[indexPath.row].title
+            currentGroup = selectedData
+            print("current Group changed to : ", currentGroup)
         }
  
     }
