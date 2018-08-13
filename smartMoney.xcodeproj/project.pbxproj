@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CC79B142121584B009BED8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC79B132121584B009BED8E /* AppDelegate.swift */; };
 		0CF90B27211D74DD00AF860B /* memberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B26211D74DD00AF860B /* memberCellTableViewCell.swift */; };
 		0CF90B29211D7B3600AF860B /* arrayFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B28211D7B3600AF860B /* arrayFile.swift */; };
 		0CF90B2C211D7B4800AF860B /* fundingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF90B2A211D7B4700AF860B /* fundingListTableViewController.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CC79B132121584B009BED8E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../TETETE/AppDelegate.swift; sourceTree = "<group>"; };
 		0CF90B26211D74DD00AF860B /* memberCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memberCellTableViewCell.swift; sourceTree = "<group>"; };
 		0CF90B28211D7B3600AF860B /* arrayFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arrayFile.swift; sourceTree = "<group>"; };
 		0CF90B2A211D7B4700AF860B /* fundingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fundingListTableViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				0CF90B30211D7BD400AF860B /* newFundingController.swift */,
 				9D922F2820F480EE00BFEFDD /* UIViewControllerKeyboard.swift */,
 				9D922EF420F47F9500BFEFDD /* AppDelegate.swift */,
+				0CC79B132121584B009BED8E /* AppDelegate.swift */,
 				9D922F2A20F480F700BFEFDD /* UIViewControllerModal.swift */,
 				9D922EF620F47F9500BFEFDD /* ViewController.swift */,
 				9D2A428E210712AB002B1DA9 /* Main.storyboard */,
@@ -353,6 +356,7 @@
 				9D922F2920F480EE00BFEFDD /* UIViewControllerKeyboard.swift in Sources */,
 				0CF90B27211D74DD00AF860B /* memberCellTableViewCell.swift in Sources */,
 				9DE413E421104DA600BF8022 /* addMoneyLogViewController.swift in Sources */,
+				0CC79B142121584B009BED8E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
