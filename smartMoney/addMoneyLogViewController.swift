@@ -47,11 +47,12 @@ class addMoneyLogViewController: UIViewController {
        
         
         if let en = eventName.text, let hm = howMuch.text, let intHM = Int(hm), let mm = memo.text{
-            let log = MoneyLog(y: year, m: month, d: day, eventName: en, money: intHM, memo: mm, InOut: IsIn)
+            if AccountInfo != nil,currentGroup != nil{
+                let log = MoneyLog(y: year, m: month, d: day, eventName: en, money: intHM, memo: mm, InOut: IsIn, balanceThen: AccountInfo[currentGroup!]!.balance + IsIn * intHM)
 
-            addLog(log)
-            saveLog()
-        
+                addLog(log)
+                saveLog()
+                }
         }
         
         self.dismiss(animated: true, completion: nil)
