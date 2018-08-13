@@ -10,11 +10,6 @@ import Foundation
 
 //initialize
 
-struct GroupInfo:Codable{
-    var name: String
-    var logs: [MoneyLog]
-}
-
 struct MoneyLog: Codable{
     var y: Int
     var m: Int
@@ -26,20 +21,12 @@ struct MoneyLog: Codable{
     //evidence info? image? string?
 }
 
+//GroupInfos = ["swift class" : [log1, log2, log3...]]
+var GroupInfos : [String : [MoneyLog]] = [:]
 
+var currentGroup : String?
+var currentGroupLogs :[MoneyLog] = []
 
-//var logs : [MoneyLog] = []
-var GroupInfos : [GroupInfo] = []
-
-
-//var currentGroup : String?
-//var currentGroupLogs :[MoneyLog] = []
-
-
-var currentGroup : String = "test group"
-var currentGroupLogs :[MoneyLog] = [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]
-
-//var balanceInfo = 0
 
 //json
 let LogJsonPath = NSHomeDirectory() + "/Documents/moneyLog.json"
@@ -63,15 +50,37 @@ func loadLog(){
     print(currentGroup)
     print(currentGroupLogs)
     
-    if let data = try? Data.init(contentsOf: LogJsonUrl), let infosFromFile = try? decoder.decode([GroupInfo].self, from: data){
+    
+    
+    if let infosFromFile = NSDictionary(contentsOfFile: LogJsonPath) as? [String:[MoneyLog]]{
+        GroupInfos = infosFromFile
+    }
+    
+    else {
+        GroupInfos = ["swift study" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)], "swift study2" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]]
+        currentGroup = "swift study"
+        currentGroupLogs = GroupInfos["swift study"]!
+        
+    }
+    
+    //initialize current Group to first group in JSON file
+    //currentGroup = infosFromFile[0].name
+    print("current Group : ", currentGroup)
+    print("current Group Logs : ", currentGroupLogs)
+    /*
+    if let data = try? Data.init(contentsOf: LogJsonUrl), let infosFromFile = try? decoder.decode(GroupInfos.self, from: data){
         print("개수 : ", infosFromFile.count)
+        
         if infosFromFile.count > 0 {
             GroupInfos = infosFromFile
             currentGroupLogs = infosFromFile[0].logs
         }
         else {
-            currentGroup = "test group"
-            currentGroupLogs = [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]
+            GroupInfos = ["swift study" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)], "swift study2" : [MoneyLog(y:1, m:2, d: 3, eventName: "hi", money: 1, memo: "1", InOut: 1)]]
+            currentGroup = "swift study"
+            currentGroupLogs = GroupInfos["swift study"]!
+
+        
         }
         
         //initialize current Group to first group in JSON file
@@ -79,13 +88,14 @@ func loadLog(){
         print("current Group : ", currentGroup)
         print("current Group Logs : ", currentGroupLogs)
     }
-    
+    */
     // plist
     
 }
 
 func saveLog(){
     // logs를 파일로 저장
+
     let encoder = JSONEncoder()
     
     if let data = try? encoder.encode(GroupInfos) {
@@ -106,8 +116,9 @@ func saveLog(){
 
 
 func addLog(_ log: MoneyLog){
-    currentGroupLogs.append(log)
-    
+    if let cg = currentGroup, var l = GroupInfos[cg]{
+        l.append(log)
+    }
     //update balance in plist
     if let info = accountInfo{
         var balanceInfo = info.object(forKey: "balance") as! Int

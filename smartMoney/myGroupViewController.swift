@@ -54,9 +54,10 @@ class myGroupViewController: UIViewController, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let indexPath = self.groupsTable.indexPathForSelectedRow, let nextVC = segue.destination as? moneyLogViewController{
+        if let indexPath = self.groupsTable.indexPathForSelectedRow{
             let selectedData = grouplist[indexPath.row].title
-            nextVC.data = selectedData
+            currentGroup = selectedData
+            print("current Group changed to : ", currentGroup)
         }
  
     }
