@@ -22,8 +22,8 @@
 		0C98707B21219FA60006FBFC /* arrayFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98707A21219FA60006FBFC /* arrayFile.swift */; };
 		0C98707D2121A6F00006FBFC /* memberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98707C2121A6EF0006FBFC /* memberCellTableViewCell.swift */; };
 		6C47072B212190BA0086940B /* DXKPMB-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD08FF612121601500FB0891 /* DXKPMB-KSCpc-EUC-H.ttf */; };
-		6C564998211C1E8C00DEECD4 /* groupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */; };
 		6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */; };
+		6C62A7C921229CFE00EF424E /* groupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62A7C821229CFE00EF424E /* groupCellTableViewCell.swift */; };
 		9D19F8E021142F1A0011ED81 /* AccountInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */; };
 		9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */; };
 		9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */; };
@@ -72,8 +72,8 @@
 		0C98707821219FA00006FBFC /* fundingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fundingListTableViewController.swift; sourceTree = "<group>"; };
 		0C98707A21219FA60006FBFC /* arrayFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arrayFile.swift; sourceTree = "<group>"; };
 		0C98707C2121A6EF0006FBFC /* memberCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memberCellTableViewCell.swift; sourceTree = "<group>"; };
-		6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupCellTableViewCell.swift; sourceTree = "<group>"; };
 		6C564995211C1E8C00DEECD4 /* GroupListEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListEditController.swift; sourceTree = "<group>"; };
+		6C62A7C821229CFE00EF424E /* groupCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupCellTableViewCell.swift; sourceTree = "<group>"; };
 		9D19F8DF21142F1A0011ED81 /* AccountInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AccountInfo.plist; sourceTree = "<group>"; };
 		9D19F8E121142FB60011ED81 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		9D1F001D211195F2007E4B59 /* PracticeCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCellCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -123,14 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CD944BE21229A3A0037283C /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				6C564994211C1E8C00DEECD4 /* groupCellTableViewCell.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		9D922EE820F47F9500BFEFDD = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +130,6 @@
 				9D922F0820F47F9500BFEFDD /* smartMoneyTests */,
 				9D922F1320F47F9500BFEFDD /* smartMoneyUITests */,
 				9D922EF220F47F9500BFEFDD /* Products */,
-				0CD944BE21229A3A0037283C /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +146,7 @@
 		9D922EF320F47F9500BFEFDD /* smartMoney */ = {
 			isa = PBXGroup;
 			children = (
+				6C62A7C821229CFE00EF424E /* groupCellTableViewCell.swift */,
 				0C98707A21219FA60006FBFC /* arrayFile.swift */,
 				0C98707821219FA00006FBFC /* fundingListTableViewController.swift */,
 				0C98707621219F910006FBFC /* fundingInfoController.swift */,
@@ -349,12 +341,12 @@
 				0C98707721219F910006FBFC /* fundingInfoController.swift in Sources */,
 				9D19F8E221142FB60011ED81 /* EditAccountViewController.swift in Sources */,
 				0C98706E212188290006FBFC /* Group.swift in Sources */,
+				6C62A7C921229CFE00EF424E /* groupCellTableViewCell.swift in Sources */,
 				0C98705C212185BB0006FBFC /* moneyLogTableViewCell.swift in Sources */,
 				0C987062212186930006FBFC /* ViewController.swift in Sources */,
 				9D1F001E211195F2007E4B59 /* PracticeCellCollectionViewCell.swift in Sources */,
 				0C98707921219FA00006FBFC /* fundingListTableViewController.swift in Sources */,
 				0C98707521219F840006FBFC /* newFundingController.swift in Sources */,
-				6C564998211C1E8C00DEECD4 /* groupCellTableViewCell.swift in Sources */,
 				0C987060212186720006FBFC /* UIViewControllerModal.swift in Sources */,
 				0C98707B21219FA60006FBFC /* arrayFile.swift in Sources */,
 				6C564999211C1E8C00DEECD4 /* GroupListEditController.swift in Sources */,

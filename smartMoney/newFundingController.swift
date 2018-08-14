@@ -25,25 +25,26 @@ class newFundingController: UIViewController {
     @IBOutlet weak var fundingNameTF: UITextField!
     @IBOutlet weak var moneyTF: UITextField!
     
+    //피커뷰로 날짜 설정하기
     @IBOutlet weak var pickerView: UIDatePicker!
     @IBAction func datePick(_ sender: Any) {
         pickerView.addTarget(self, action: #selector(changed), for: .valueChanged)
-    
+        
     }
     
     @objc func changed(){
         let dateformatter = DateFormatter()
-        dateformatter.dateStyle = .medium
-        dateformatter.timeStyle = .short
+        dateformatter.dateFormat = "yyyy년 M월 d일"
         date = dateformatter.string(from: pickerView.date)
     }
     
-   
+    
     
     @IBOutlet weak var moreTF: UITextField!
     
-
     
+    
+    // 확인버튼 누르면 적은 내용 저장해서 fundingList 배열에 추가하기
     @IBAction func saveButton(_ sender: Any) {
         if fundingNameTF.text != "" , moneyTF.text != "" {
             
@@ -60,31 +61,29 @@ class newFundingController: UIViewController {
         
     }
     
+    //적은 내용으로 Funding 인스턴스만들고 배열에 추가하는 함수
+    // 일단은 더미 멤버로 만들어 놓음 2
     func saveData() {
-        let info = Funding(name : fundingNameTF.text!, money :  moneyTF.text!, dueDate : date, more : moreTF.text!, yesMember: [], noMember: [])
+        let info = Funding(name : fundingNameTF.text!, money :  moneyTF.text!, dueDate : date, more : moreTF.text!, yesMember: [], noMember : ["김철수", "박영희", "유재석", "박명수", "정준하", "개구리"])
         fundingList += [info]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }
