@@ -54,7 +54,7 @@ class moneyLogViewController: UIViewController, UITableViewDataSource {
             
         }
         else{
-            cell.balance.text = "-\(InOutMoney)"
+            cell.balance.text = "\(InOutMoney)"
             //cell.balance.textColor = UIColor(rgb: 0xFF6575)
             
         }

@@ -58,6 +58,7 @@ func loadLog(){
         
         do{
             GroupInfos = try decoder.decode([String:[MoneyLog]].self, from: data)
+            print(LogJsonPath)
         }catch{
             print("error!!! cannot decode moneyLog.json file!!")
         }
@@ -72,6 +73,7 @@ func loadLog(){
         
         do{
             AccountInfo = try decoder.decode([String:accountInfo].self, from: data)
+            print(AccountInfoPath)
             
         }catch{
             print("error!!! cannot decode accountInfo.json file!!")
